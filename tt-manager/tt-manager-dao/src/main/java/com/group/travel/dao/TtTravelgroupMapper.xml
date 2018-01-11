@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.travel.dao.TtTravelgroupMapper">
+  <resultMap id="BaseResultMap" type="com.group.travel.pojo.po.TtTravelgroup">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="startPlace" jdbcType="VARCHAR" property="startplace" />
+    <result column="destination" jdbcType="VARCHAR" property="destination" />
+    <result column="travelGroupPrice" jdbcType="BIGINT" property="travelgroupprice" />
+    <result column="travelDay" jdbcType="INTEGER" property="travelday" />
+    <result column="travelFeature" jdbcType="VARCHAR" property="travelfeature" />
+    <result column="isDiscount" jdbcType="INTEGER" property="isdiscount" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, title, startPlace, destination, travelGroupPrice, travelDay, travelFeature, isDiscount
+  </sql>
+  <select id="selectByExample" parameterType="com.group.travel.pojo.po.TtTravelgroupExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tt_travelgroup
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tt_travelgroup
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tt_travelgroup
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.group.travel.pojo.po.TtTravelgroupExample">
+    delete from tt_travelgroup
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.group.travel.pojo.po.TtTravelgroup">
+    insert into tt_travelgroup (id, title, startPlace, 
+      destination, travelGroupPrice, travelDay, 
+      travelFeature, isDiscount)
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{startplace,jdbcType=VARCHAR}, 
+      #{destination,jdbcType=VARCHAR}, #{travelgroupprice,jdbcType=BIGINT}, #{travelday,jdbcType=INTEGER}, 
+      #{travelfeature,jdbcType=VARCHAR}, #{isdiscount,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.group.travel.pojo.po.TtTravelgroup">
+    insert into tt_travelgroup
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="startplace != null">
+        startPlace,
+      </if>
+      <if test="destination != null">
+        destination,
+      </if>
+      <if test="travelgroupprice != null">
+        travelGroupPrice,
+      </if>
+      <if test="travelday != null">
+        travelDay,
+      </if>
+      <if test="travelfeature != null">
+        travelFeature,
+      </if>
+      <if test="isdiscount != null">
+        isDiscount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="startplace != null">
+        #{startplace,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null">
+        #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="travelgroupprice != null">
+        #{travelgroupprice,jdbcType=BIGINT},
+      </if>
+      <if test="travelday != null">
+        #{travelday,jdbcType=INTEGER},
+      </if>
+      <if test="travelfeature != null">
+        #{travelfeature,jdbcType=VARCHAR},
+      </if>
+      <if test="isdiscount != null">
+        #{isdiscount,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.group.travel.pojo.po.TtTravelgroupExample" resultType="java.lang.Integer">
+    select count(*) from tt_travelgroup
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update tt_travelgroup
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startplace != null">
+        startPlace = #{record.startplace,jdbcType=VARCHAR},
+      </if>
+      <if test="record.destination != null">
+        destination = #{record.destination,jdbcType=VARCHAR},
+      </if>
+      <if test="record.travelgroupprice != null">
+        travelGroupPrice = #{record.travelgroupprice,jdbcType=BIGINT},
+      </if>
+      <if test="record.travelday != null">
+        travelDay = #{record.travelday,jdbcType=INTEGER},
+      </if>
+      <if test="record.travelfeature != null">
+        travelFeature = #{record.travelfeature,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isdiscount != null">
+        isDiscount = #{record.isdiscount,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update tt_travelgroup
+    set id = #{record.id,jdbcType=BIGINT},
+      title = #{record.title,jdbcType=VARCHAR},
+      startPlace = #{record.startplace,jdbcType=VARCHAR},
+      destination = #{record.destination,jdbcType=VARCHAR},
+      travelGroupPrice = #{record.travelgroupprice,jdbcType=BIGINT},
+      travelDay = #{record.travelday,jdbcType=INTEGER},
+      travelFeature = #{record.travelfeature,jdbcType=VARCHAR},
+      isDiscount = #{record.isdiscount,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.group.travel.pojo.po.TtTravelgroup">
+    update tt_travelgroup
+    <set>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="startplace != null">
+        startPlace = #{startplace,jdbcType=VARCHAR},
+      </if>
+      <if test="destination != null">
+        destination = #{destination,jdbcType=VARCHAR},
+      </if>
+      <if test="travelgroupprice != null">
+        travelGroupPrice = #{travelgroupprice,jdbcType=BIGINT},
+      </if>
+      <if test="travelday != null">
+        travelDay = #{travelday,jdbcType=INTEGER},
+      </if>
+      <if test="travelfeature != null">
+        travelFeature = #{travelfeature,jdbcType=VARCHAR},
+      </if>
+      <if test="isdiscount != null">
+        isDiscount = #{isdiscount,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.group.travel.pojo.po.TtTravelgroup">
+    update tt_travelgroup
+    set title = #{title,jdbcType=VARCHAR},
+      startPlace = #{startplace,jdbcType=VARCHAR},
+      destination = #{destination,jdbcType=VARCHAR},
+      travelGroupPrice = #{travelgroupprice,jdbcType=BIGINT},
+      travelDay = #{travelday,jdbcType=INTEGER},
+      travelFeature = #{travelfeature,jdbcType=VARCHAR},
+      isDiscount = #{isdiscount,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

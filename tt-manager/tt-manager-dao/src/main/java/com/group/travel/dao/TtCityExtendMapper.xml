@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.travel.dao.TtCityExtendMapper">
+  <resultMap id="BaseResultMap" type="com.group.travel.pojo.po.TtCity">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="parentId" jdbcType="INTEGER" property="parentid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="sortOrder" jdbcType="INTEGER" property="sortorder" />
+    <result column="isParent" jdbcType="INTEGER" property="isparent" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="updated" jdbcType="TIMESTAMP" property="updated" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, parentId, name, status, sortOrder, isParent, created, updated
+  </sql>
+  <select id="selectByIsParent" resultType="com.group.travel.pojo.po.TtCity">
+      select
+      <include refid="Base_Column_List"></include>
+      from tt_city
+      where isParent = #{isparent}
+  </select>
+</mapper>
