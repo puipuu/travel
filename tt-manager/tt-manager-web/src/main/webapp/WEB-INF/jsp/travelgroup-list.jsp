@@ -36,7 +36,7 @@
 <script type="text/javascript">
     $(function () {
         var t = $("#table_server").bootstrapTable({
-            url: 'http://localhost:8080/travel/travelGroups',
+            url: '${pageContext.request.contextPath}/travelGroups',
             method: 'get',
             dataType: "json",
             striped: true,//设置为 true 会有隔行变色效果
