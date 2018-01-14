@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JDshop后台</title>
+    <title>班花网后台管理系统</title>
     <!--Bootstrap-->
 
 
@@ -44,7 +44,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    班花网后台管理系统 0.0.1版本
+                    班花网后台管理系统 0.0.2版本
                 </small>
             </a>
         </div>
