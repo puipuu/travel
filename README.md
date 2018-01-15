@@ -2,6 +2,7 @@
 Tt-travel<br>
 与小伙伴一起制作<br>
 0.0.1 版本<br>
+2017-01-12<br>
 使用Mybatis-Generator自动生成Dao、Model、Mapping<br>
 jdk 1.8;<br>
 SSM 4.2.8;<br>
