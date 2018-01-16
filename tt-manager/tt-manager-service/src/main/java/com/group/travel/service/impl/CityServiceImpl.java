@@ -1,5 +1,6 @@
 package com.group.travel.service.impl;
 
+import com.group.travel.dao.TtCityAreaExtendMapper;
 import com.group.travel.dao.TtCityAreaMapper;
 import com.group.travel.dao.TtCityExtendMapper;
 import com.group.travel.dao.TtCityMapper;
@@ -33,6 +34,8 @@ public class CityServiceImpl implements CityService{
     private TtCityExtendMapper cityExtendDao;
     @Autowired
     private TtCityAreaMapper cityAreaDao;
+    @Autowired
+    private TtCityAreaExtendMapper areaExtendDao;
 
     @Override
     public List<TtCity> listCitys() {
@@ -118,6 +121,19 @@ public class CityServiceImpl implements CityService{
         }
         System.out.println(i);
         return i;
+    }
+
+
+    @Override
+    public List<TtCityArea> listAreaByCid() {
+        List<TtCityArea> list = null;
+        try {
+            list = areaExtendDao.selectByIsParent();
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
     }
 
 /*    public List<TreeNode> listNodes(Long parentId){

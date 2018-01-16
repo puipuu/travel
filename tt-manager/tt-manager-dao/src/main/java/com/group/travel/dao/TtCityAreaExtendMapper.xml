@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group.travel.dao.TtCityAreaExtendMapper">
+  <resultMap id="BaseResultMap" type="com.group.travel.pojo.po.TtCityArea">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cid" jdbcType="BIGINT" property="cid" />
+    <result column="areaName" jdbcType="VARCHAR" property="areaname" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.group.travel.pojo.po.TtCityArea">
+    <result column="areaNorms" jdbcType="LONGVARCHAR" property="areanorms" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cid, areaName
+  </sql>
+  <sql id="Blob_Column_List">
+    areaNorms
+  </sql>
+  <select id="selectByIsParent" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tt_city_area
+  </select>
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group.travel.dao.TtHotelUnMapper" >
+  <resultMap id="BaseResultMap" type="com.group.travel.pojo.vo.TtHotelUn">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="hotelName" jdbcType="VARCHAR" property="hotelname" />
+    <result column="hotelAddress" jdbcType="VARCHAR" property="hoteladdress" />
+    <result column="cityId" jdbcType="BIGINT" property="cityid" />
+    <result column="hotelPrice" jdbcType="BIGINT" property="hotelprice" />
+    <result column="hotelPicture" jdbcType="VARCHAR" property="hotelpicture" />
+    <result column="hotelleve" jdbcType="INTEGER" property="hotelleve" />
+    <result column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="areaId" property="areaid" jdbcType="BIGINT" />
+    <result column="ename" property="ename" jdbcType="VARCHAR" />
+    <result column="open_time" property="openTime" jdbcType="VARCHAR" />
+    <result column="rooms_count" property="roomsCount" jdbcType="INTEGER" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, hotelName, hotelAddress, cityId, hotelPrice, hotelPicture, hotelleve, cid, status, areaId, ename, open_time, rooms_count, latitude, longitude
+  </sql>
+  <select id="selectBySerch" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tt_hotel
+    left join tt_hotel_supple  on tt_hotel.id=tt_hotel_supple.hotelId
+    where
+    status != #{status}
+  </select>
+</mapper>

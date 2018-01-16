@@ -3,6 +3,7 @@ package com.group.travel.web;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
 import com.group.travel.pojo.po.TtCityArea;
+import com.group.travel.pojo.po.TtHotel;
 import com.group.travel.service.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,8 +57,22 @@ public class CityAction {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/ttcity/ttarea")
+    public List<TtCityArea> getTtAreaByCid(){
+        List<TtCityArea> list = null;
+        try {
+            list = cityService.listAreaByCid();
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/ttcity/area")
     public int areaAdd(TtCityArea area){
+
         int i = 0;
         try {
             i = cityService.addArea(area);
