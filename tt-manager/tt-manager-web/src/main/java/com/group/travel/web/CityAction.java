@@ -2,6 +2,7 @@ package com.group.travel.web;
 
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
+import com.group.travel.pojo.po.TtCityArea;
 import com.group.travel.service.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,7 @@ public class CityAction {
 
     @Autowired
     private CityService cityService;
+
 
     @ResponseBody
     @RequestMapping(value = "/city")
@@ -52,4 +54,18 @@ public class CityAction {
         }
         return  list;
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/ttcity/area")
+    public int areaAdd(TtCityArea area){
+        int i = 0;
+        try {
+            i = cityService.addArea(area);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
+    }
+
 }

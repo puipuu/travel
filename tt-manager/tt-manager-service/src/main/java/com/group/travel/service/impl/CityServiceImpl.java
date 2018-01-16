@@ -1,11 +1,14 @@
 package com.group.travel.service.impl;
 
+import com.group.travel.dao.TtCityAreaMapper;
 import com.group.travel.dao.TtCityExtendMapper;
 import com.group.travel.dao.TtCityMapper;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
+import com.group.travel.pojo.po.TtCityArea;
 import com.group.travel.pojo.po.TtCityExample;
 import com.group.travel.service.CityService;
+import com.group.travel.utils.IDUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,8 @@ public class CityServiceImpl implements CityService{
     private TtCityMapper cityDao;
     @Autowired
     private TtCityExtendMapper cityExtendDao;
+    @Autowired
+    private TtCityAreaMapper cityAreaDao;
 
     @Override
     public List<TtCity> listCitys() {
@@ -99,6 +104,20 @@ public class CityServiceImpl implements CityService{
             e.printStackTrace();
         }
         return  list;
+    }
+
+    @Override
+    public int addArea(TtCityArea ttCityArea) {
+        int i = 0;
+        try {
+            Long itemId  = IDUtils.getItemId();
+            ttCityArea.setId(itemId);
+            i = cityAreaDao.insertSelective(ttCityArea);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
     }
 
 /*    public List<TreeNode> listNodes(Long parentId){
