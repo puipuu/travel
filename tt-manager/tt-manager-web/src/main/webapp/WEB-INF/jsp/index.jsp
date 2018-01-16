@@ -232,6 +232,21 @@
                     icon: 'icon-glass',
                     url: '${pageContext.request.contextPath}/user-add'
                 }]
+            },{
+                id: '7',
+                text: '城市区域管理',
+                url: '',
+                menus: [/*{
+                    id: '71',
+                    text: '查询列表',
+                    url: '${pageContext.request.contextPath}/user-list'
+                }, */
+                    {
+                    id: '72',
+                    text: '新增区域',
+                    icon: 'icon-glass',
+                    url: '${pageContext.request.contextPath}/area-add'
+                }]
             }]
         });
     });
