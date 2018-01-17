@@ -2,6 +2,8 @@ package com.group.travel.web;
 
 
 import com.group.travel.pojo.po.TtHotel;
+import com.group.travel.pojo.po.TtHotelSupple;
+import com.group.travel.pojo.vo.TtHotelUn;
 import com.group.travel.service.HotelsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,8 +37,8 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotels",method = RequestMethod.GET)
-    public List<TtHotel> listHotels(){
-        List<TtHotel> list = null;
+    public List<TtHotelUn> listHotels(){
+        List<TtHotelUn> list = null;
         try {
             list = hotelsService.listHotels();
         }catch (Exception e){
@@ -48,11 +50,18 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotels/serch",method = RequestMethod.GET)
-    public List<TtHotel> listHotelsSerch(TtHotel hotel){
-        List<TtHotel> list = null;
-        System.out.println("name:"+hotel.getHotelname()+","+"status"+hotel.getStatus());
+    public List<TtHotelUn> listHotelsSerch(TtHotel hotel){
+/*        List<TtHotel> list = null;
         try {
             list = hotelsService.listHotelsSerch(hotel);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;*/
+        List<TtHotelUn> list = null;
+        try {
+            list = hotelsService.listHotels();
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();
@@ -62,10 +71,10 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotel",method = RequestMethod.POST)
-    public int saveHotel(TtHotel hotel,String hotelDesc){
+    public int saveHotel(TtHotel hotel,String hotelDesc,TtHotelSupple supple){
         int i = 0;
         try{
-            i = hotelsService.saveHotel(hotel,hotelDesc);
+            i = hotelsService.saveHotel(hotel,hotelDesc,supple);
         }catch (Exception e) {
             logger.error(e.getMessage(), e);
             e.printStackTrace();
@@ -102,9 +111,21 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotel/update",method = RequestMethod.POST)
+    public int updateHotel(TtHotel hotel, TtHotelSupple supple){
+        int i = 0;
+        try{
+            i = hotelsService.updateHotel(hotel,supple);
+        }catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            e.printStackTrace();
+        }
+        return i;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/hotel/update2",method = RequestMethod.POST)
     public int updateHotel(TtHotel hotel){
         int i = 0;
-        System.out.println(hotel.toString());
         try{
             i = hotelsService.updateHotel(hotel);
         }catch (Exception e) {

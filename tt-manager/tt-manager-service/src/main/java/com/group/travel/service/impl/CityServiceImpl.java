@@ -1,15 +1,20 @@
 package com.group.travel.service.impl;
 
+import com.group.travel.dao.TtCityAreaExtendMapper;
+import com.group.travel.dao.TtCityAreaMapper;
 import com.group.travel.dao.TtCityExtendMapper;
 import com.group.travel.dao.TtCityMapper;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
+import com.group.travel.pojo.po.TtCityArea;
 import com.group.travel.pojo.po.TtCityExample;
 import com.group.travel.service.CityService;
+import com.group.travel.utils.IDUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +33,10 @@ public class CityServiceImpl implements CityService{
     private TtCityMapper cityDao;
     @Autowired
     private TtCityExtendMapper cityExtendDao;
+    @Autowired
+    private TtCityAreaMapper cityAreaDao;
+    @Autowired
+    private TtCityAreaExtendMapper areaExtendDao;
 
     @Override
     public List<TtCity> listCitys() {
@@ -93,6 +102,55 @@ public class CityServiceImpl implements CityService{
                 ttcity.setId(city.getId());
                 ttcity.setName(city.getName());*/
                 list.add(city);
+            }
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @Transactional
+    @Override
+    public int addArea(TtCityArea ttCityArea) {
+        int i = 0;
+        try {
+            Long itemId  = IDUtils.getItemId();
+            ttCityArea.setId(itemId);
+            i = cityAreaDao.insertSelective(ttCityArea);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
+    }
+
+
+    @Override
+    public List<TtCityArea> listAreaByCid() {
+        List<TtCityArea> list = null;
+        try {
+            list = areaExtendDao.selectByIsParent();
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @Override
+    public List<TreeNode> listAreaByCid(Long cid) {
+        List<TreeNode> list =  new ArrayList<TreeNode>();;
+        try {
+            TtCityArea area = new TtCityArea();
+            area.setCid(cid);
+            List<TtCityArea> areas = areaExtendDao.selectByCid(area);
+            for (TtCityArea area1:areas
+                 ) {
+                TreeNode node = new TreeNode();
+                node.setId(area1.getId());
+                node.setText(area1.getAreaname());
+                list.add(node);
             }
         }catch (Exception e){
             logger.error(e.getMessage(),e);

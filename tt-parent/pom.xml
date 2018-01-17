@@ -11,6 +11,7 @@
         <module>../tt-common</module>
         <module>../tt-manager</module>
         <module>../tt-portal-web</module>
+        <module>../tt-ftp</module>
     </modules>
 
     <!--打包方式-->
