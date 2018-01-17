@@ -29,4 +29,6 @@ public interface HotelsService {
     int batchUpdate(List<Long> ids, Integer aa);
 
     List<TtHotel> listHotelsSerch(TtHotel hotel);
+
+    int saveHotel(TtHotel hotel, String hotelDesc, TtHotelSupple supple);
 }

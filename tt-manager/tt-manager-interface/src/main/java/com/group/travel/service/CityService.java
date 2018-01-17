@@ -22,4 +22,6 @@ public interface CityService {
     int addArea(TtCityArea ttCityArea);
 
     List<TtCityArea> listAreaByCid();
+
+    List<TreeNode> listAreaByCid(Long cid);
 }

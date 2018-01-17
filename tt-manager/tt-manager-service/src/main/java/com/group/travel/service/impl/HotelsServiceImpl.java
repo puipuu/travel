@@ -98,6 +98,32 @@ public class HotelsServiceImpl implements HotelsService {
         return i;
     }
 
+    @Transactional
+    @Override
+    public int saveHotel(TtHotel hotel, String hotelDesc, TtHotelSupple supple) {
+        int i = 0;
+        try {
+            //存放两张表
+            Long itemId  = IDUtils.getItemId();
+            hotel.setId(itemId);
+            i = hotelsDao.insert(hotel);
+            TtHotelDes ttHotelDes = new TtHotelDes();
+            ttHotelDes.setId(itemId);
+            ttHotelDes.setHotelnorms(hotelDesc);
+            Date date = new Date();
+            Timestamp nousedate = new Timestamp(date.getTime());
+            ttHotelDes.setCreated(nousedate);
+            ttHotelDes.setUpdated(nousedate);
+            i += hotelsDescDao.insert(ttHotelDes);
+            supple.setHotelid(itemId);
+            i += hotelSuppleDao.insert(supple);
+        }catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            e.printStackTrace();
+        }
+        return i;
+    }
+
 /*    @Override
     public int batchUpdate(List<Long> ids) {
         int i = 0;
@@ -128,6 +154,7 @@ public class HotelsServiceImpl implements HotelsService {
         }
         return i;
     }
+
 
     @Override
     public int updateHotel(TtHotel hotel, TtHotelSupple supple) {
@@ -181,6 +208,5 @@ public class HotelsServiceImpl implements HotelsService {
     }
 
 
-    private class TtHotelSuppleUnMapper {
-    }
+
 }

@@ -22,4 +22,12 @@
     <include refid="Blob_Column_List" />
     from tt_city_area
   </select>
+  <select id="selectByCid" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tt_city_area
+    WHERE cid=#{cid}
+  </select>
 </mapper>

@@ -5,14 +5,12 @@ import com.group.travel.pojo.po.TtCity;
 import com.group.travel.pojo.po.TtCityArea;
 import com.group.travel.pojo.po.TtHotel;
 import com.group.travel.service.CityService;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,8 +55,21 @@ public class CityAction {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/ttcity/ttareacid")
+    public List<TreeNode> getTtAreaByCid(@RequestParam("cid[]") List<Long> cids){
+        List<TreeNode> list = null;
+        try {
+            list = cityService.listAreaByCid(cids.get(0));
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/ttcity/ttarea")
-    public List<TtCityArea> getTtAreaByCid(){
+    public List<TtCityArea> getTtArea(){
         List<TtCityArea> list = null;
         try {
             list = cityService.listAreaByCid();

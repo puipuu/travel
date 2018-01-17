@@ -32,7 +32,6 @@
     <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
     <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/language/zh_CN.min.js"></script>
-
 </head>
 
 <body>
@@ -53,20 +52,43 @@
                    placeholder="请输入名称" data-options="validType:'length[0,150]',multiline:true">
         </div>
     <div class="form-group ">
+        <label for="ename">酒店英文名称</label>
+        <input type="text" class="form-control" id="ename" name="ename" width="50%"
+               placeholder="请输入名称" data-options="validType:'length[0,150]',multiline:true">
+    </div>
+    <div class="form-group ">
         <label for="address">酒店地址</label>
         <input type="text" class="form-control" id="address" name="hoteladdress" width="50%"
                placeholder="请输入地址" required>
     </div>
         <div class="form-group ">
             <label for="combotree1">城市</label>
-            <%--<select  class="form-control" style="width: 100px;" id="cityid" name="cityid">
-                <option>全部</option>
-                <option>上架</option>
-                <option>下架</option>
-            </select>--%>
             <div id="combotree1"></div>
-            <%--<input id="city" name="cityid" style="width:200px;">--%>
         </div>
+    <div class="form-group ">
+        <label for="combotree1">区域</label>
+        <div id="combotree2"></div>
+    </div>
+    <div class="form-group ">
+        <label for="latitude">经度</label>
+        <input type="number" class="form-control"  id="latitude" name="latitude" width="50%"
+               placeholder="请输入数值" required>
+    </div>
+    <div class="form-group ">
+        <label for="longitude">纬度</label>
+        <input type="number" class="form-control"  id="longitude" name="longitude" width="50%"
+               placeholder="请输入数值" required>
+    </div>
+    <div class="form-group ">
+        <label for="openTime">酒店开业时间</label>
+        <input type="number" class="form-control"  id="openTime" name="openTime" width="50%"
+               placeholder="请输入数值" required>
+    </div>
+    <div class="form-group ">
+        <label for="roomsCount">酒店房间数</label>
+        <input type="number" class="form-control"  id="roomsCount" name="roomsCount" width="50%"
+               placeholder="请输入数值" required>
+    </div>
     <div class="form-group ">
         <label for="price">酒店价格</label>
         <input type="number" class="form-control" step="0.01" id="price" name="hotelprice" width="50%"
@@ -169,7 +191,7 @@
             datatype:'json',
             type:'POST',
             success:function(data){
-                if (data == 2) {
+                if (data == 3) {
                     //$.messager.alert('温馨提示','新增酒店成功！','success');
                     //sweetAlert("温馨提示", "新增酒店成功！", "success");
                     //$(location).attr('href', '${pageContext.request.contextPath}/hotels-list');
@@ -225,28 +247,91 @@
             datatype:"json",
             type:'POST',
             success:function (Data) {
+
                 $("#combotree1").bootstrapCombotree({
-                    defaultLable : '请选择列表',//默认按钮上的文本
+                    defaultLable: '请选择列表',//默认按钮上的文本
                     data: Data,//data应符合实例的data格式
                     showIcon: true,//显示图标
-                    width : 400,//下拉列表宽度
-                    name : 'cityid',//combotree值域的name，可以用在表单提交
-                    maxItemsDisplay : 1,//按钮上最多显示多少项，如果超出这个数目，将会以‘XX项已被选中代替’
+                    width: 400,//下拉列表宽度
+                    name: 'cityid',//combotree值域的name，可以用在表单提交
+                    maxItemsDisplay: 1,//按钮上最多显示多少项，如果超出这个数目，将会以‘XX项已被选中代替’
                     //selectToCheck : true,//为了兼容移动设备，点击属性菜单项时自动选中节点
-                    onCheck : function (node) {//树形菜单被选中时触发事件, node为选中的那个节点
+                    onCheck: function (node) {//树形菜单被选中时触发事件, node为选中的那个节点
+                        /*                        alert($("#combotree1").bootstrapCombotree('getValue'))
+                                                $('#combotree2').bootstrapCombotree({
+                                                    defaultLable : '请选择列表',//默认按钮上的文本
+                                                    url:'
+                        ',
+                            data:{},
+                            valueField:'id',
+                            textField:'areaname',
+                            enabled:true,
+                            //multiple:true,开启多选
+                            formatter:function(rec){
+                                rec['areaname'] = rec.areaname+'_';//格式化选择项
+                                return rec;
+                            },
+                            unSelect:function(val,rec){
+                                console.log($('#order_status1').bootstrapSelect('getValue'));
+                            },
+                            onSelect:function(val,rec){
+                                console.log('comb2:'+$('#combotree2').bootstrapSelect('getValue'));//获取选中值
+                                console.log($('#combotree2').bootstrapSelect('getValue'));
+                                $('#combotree2').bootstrapSelect('setValue','2');
+                            },
+                            onBeforeLoad:function(params){
+                                params['areaname'] = '请选择列表';//加载前改变参数username的值
+                            }
+                        });*/
+                        var  a = $("#combotree1").bootstrapCombotree('getValue');
+                        var cids = [];
+                        cids.push(a);
+                        $.ajax({
+
+                            url:"${pageContext.request.contextPath}/ttcity/ttareacid",
+                            data:{"cid[]":cids},
+                            datatype:"json",
+                            type:'POST',
+                            success:function (Data) {
+                                $("#combotree2").bootstrapCombotree({
+                                    defaultLable: '请选择列表',//默认按钮上的文本
+                                    data: Data,//data应符合实例的data格式
+                                    showIcon: true,//显示图标
+                                    width: 400,//下拉列表宽度
+                                    name: 'areaid',//combotree值域的name，可以用在表单提交
+                                    maxItemsDisplay: 1,//按钮上最多显示多少项，如果超出这个数目，将会以‘XX项已被选中代替’
+                                    //selectToCheck : true,//为了兼容移动设备，点击属性菜单项时自动选中节点
+                                    onCheck: function (node) {//树形菜单被选中时触发事件, node为选中的那个节点
+                                    },
+                                    onBeforeCheck: function (node) {//树形菜单被选中前触发事件, node为选中的那个节点
+                                        return false;
+                                    },
+                                    onBeforeUnCheck: function (node) {//树形菜单被取消选中前触发事件, node为选中的那个节点
+
+                                    },
+                                    onUnCheck: function (node) {////树形菜单被取消选中时触发事件, node为选中的那个节点
+
+                                    }
+
+                                });
+                            },
+                            error:function () {
+                                alert("服务器未知错误");
+                            }
+                        })
 
                     },
-                    onBeforeCheck : function (node) {//树形菜单被选中前触发事件, node为选中的那个节点
+                    onBeforeCheck: function (node) {//树形菜单被选中前触发事件, node为选中的那个节点
                         return false;
                     },
-                    onBeforeUnCheck : function (node) {//树形菜单被取消选中前触发事件, node为选中的那个节点
+                    onBeforeUnCheck: function (node) {//树形菜单被取消选中前触发事件, node为选中的那个节点
 
                     },
-                    onUnCheck : function (node) {////树形菜单被取消选中时触发事件, node为选中的那个节点
+                    onUnCheck: function (node) {////树形菜单被取消选中时触发事件, node为选中的那个节点
 
                     }
 
-                })
+                });
                 /*$('#combotree1').treeview({
                     data: Data,         // 数据源
                     //showCheckbox: true,   //是否显示复选框
@@ -267,6 +352,7 @@
                 alert("服务器未知错误");
             }
         })
+
 
         $('#hotelAddForm').bootstrapValidator({
             message: '不能为空',

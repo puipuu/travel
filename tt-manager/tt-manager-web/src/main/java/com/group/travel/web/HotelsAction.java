@@ -71,10 +71,10 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotel",method = RequestMethod.POST)
-    public int saveHotel(TtHotel hotel,String hotelDesc){
+    public int saveHotel(TtHotel hotel,String hotelDesc,TtHotelSupple supple){
         int i = 0;
         try{
-            i = hotelsService.saveHotel(hotel,hotelDesc);
+            i = hotelsService.saveHotel(hotel,hotelDesc,supple);
         }catch (Exception e) {
             logger.error(e.getMessage(), e);
             e.printStackTrace();
