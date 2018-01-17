@@ -1,6 +1,8 @@
 package com.group.travel.service;
 
 import com.group.travel.pojo.po.TtHotel;
+import com.group.travel.pojo.po.TtHotelSupple;
+import com.group.travel.pojo.vo.TtHotelUn;
 
 import java.util.List;
 
@@ -14,7 +16,7 @@ public interface HotelsService {
 
     TtHotel getHotelsById(Long id);
 
-    List<TtHotel> listHotels();
+    List<TtHotelUn> listHotels();
 
     int saveHotel(TtHotel hotel, String hotelDesc);
 
@@ -22,7 +24,11 @@ public interface HotelsService {
 
     int updateHotel(TtHotel hotel);
 
+    int updateHotel(TtHotel hotel, TtHotelSupple supple);
+
     int batchUpdate(List<Long> ids, Integer aa);
 
     List<TtHotel> listHotelsSerch(TtHotel hotel);
+
+    int saveHotel(TtHotel hotel, String hotelDesc, TtHotelSupple supple);
 }

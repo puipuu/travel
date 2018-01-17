@@ -136,6 +136,19 @@
                 }
             },
             {
+                field: 'ename',
+                title: '酒店英文名称',
+                sortable:true,
+                editable: {
+                    type: 'text',
+                    title: '酒店英文名称',
+                    validate: function (v) {
+                        if (!v) return '酒店英文名称不能为空';
+
+                    }
+                }
+            },
+            {
                 field: 'hoteladdress',
                 title: '酒店地址',
                 editable: {
@@ -168,6 +181,64 @@
                         return result;
                     }
                 }
+            },{
+                field: 'areaid',
+                title: '区域',
+                editable: {
+                    type: 'select',
+                    title: '区域',
+                    source: function () {
+                        var result = [];
+                        $.ajax({
+                            url: '${pageContext.request.contextPath}/ttcity/ttarea',
+                            async: false,
+                            type: "get",
+                            datatype:"json",
+                            success: function (data, status) {
+                                $.each(data, function (key, value) {
+                                    result.push({ value: value.id, text: value.areaname });
+                                });
+                            }
+                        });
+                        return result;
+                    }
+                }
+            },
+            {
+                field: 'latitude',
+                title: '经度',
+                editable: {
+                    type: 'text',
+                    title: '经度',
+                    validate: function (v) {
+                        if (!v) return '经度不能为空';
+
+                    }
+                }
+            },
+            {
+                field: 'longitude',
+                title: '纬度',
+                editable: {
+                    type: 'text',
+                    title: '纬度',
+                    validate: function (v) {
+                        if (!v) return '纬度不能为空';
+
+                    }
+                }
+            },
+            {
+                field: 'openTime',
+                title: '酒店开业时间',
+                editable: {
+                    type: 'text',
+                    title: '酒店开业时间',
+                    validate: function (v) {
+                        if (!v) return '酒店开业时间不能为空';
+
+                    }
+                }
             },
             {
                 field: 'hotelprice',
@@ -177,6 +248,18 @@
                     title: '酒店价格',
                     validate: function (v) {
                         if (!v) return '酒店价格不能为空';
+
+                    }
+                }
+            },
+            {
+                field: 'roomsCount',
+                title: '房间数',
+                editable: {
+                    type: 'text',
+                    title: '房间数',
+                    validate: function (v) {
+                        if (!v) return '房间数不能为空';
 
                     }
                 }
@@ -278,14 +361,15 @@
           当前行数据对象、更新前的值、编辑的当前单元格的jQuery对象。*/
         onEditableSave:function (filed,row,oldValue,$el) {
                         var Data={id:row.id,hotelname:row.hotelname,hoteladdress:row.hoteladdress,cityid:row.cityid,
-                            hotelprice:row.hotelprice,hotelpicture:row.hotelpicture,hotelleve:row.hotelleve,cid:row.cid,status:row.status}
+                            hotelprice:row.hotelprice,hotelpicture:row.hotelpicture,hotelleve:row.hotelleve,cid:row.cid,status:row.status,hotelid:row.id,
+                            areaid:row.areaid,ename:row.ename,roomsCount:row.roomsCount,openTime:row.openTime,latitude:row.latitude,longitude:row.longitude}
                         $.ajax({
                             url:"${pageContext.request.contextPath}/hotel/update",
                             data:Data,
                             datatype:"text",
                             type:'POST',
                     success:function (data) {
-                        if(data==1){
+                        if(data==2){
                             sweetAlert("提示", "修改成功!", "success");
                         }else{
                             sweetAlert("警告", "修改失败!", "error");

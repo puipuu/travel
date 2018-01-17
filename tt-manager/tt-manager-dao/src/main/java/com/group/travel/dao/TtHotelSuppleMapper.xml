@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.group.travel.dao.TtHotelSuppleMapper" >
+  <resultMap id="BaseResultMap" type="com.group.travel.pojo.po.TtHotelSupple" >
+    <id column="hotelId" property="hotelid" jdbcType="BIGINT" />
+    <result column="areaId" property="areaid" jdbcType="BIGINT" />
+    <result column="ename" property="ename" jdbcType="VARCHAR" />
+    <result column="open_time" property="openTime" jdbcType="VARCHAR" />
+    <result column="rooms_count" property="roomsCount" jdbcType="INTEGER" />
+    <result column="latitude" property="latitude" jdbcType="DECIMAL" />
+    <result column="longitude" property="longitude" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    hotelId, areaId, ename, open_time, rooms_count, latitude, longitude
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.group.travel.pojo.po.TtHotelSuppleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tt_hotel_supple
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tt_hotel_supple
+    where hotelId = #{hotelid,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tt_hotel_supple
+    where hotelId = #{hotelid,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.group.travel.pojo.po.TtHotelSuppleExample" >
+    delete from tt_hotel_supple
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.group.travel.pojo.po.TtHotelSupple" >
+    insert into tt_hotel_supple (hotelId, areaId, ename, 
+      open_time, rooms_count, latitude, 
+      longitude)
+    values (#{hotelid,jdbcType=BIGINT}, #{areaid,jdbcType=BIGINT}, #{ename,jdbcType=VARCHAR}, 
+      #{openTime,jdbcType=VARCHAR}, #{roomsCount,jdbcType=INTEGER}, #{latitude,jdbcType=DECIMAL}, 
+      #{longitude,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.group.travel.pojo.po.TtHotelSupple" >
+    insert into tt_hotel_supple
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelid != null" >
+        hotelId,
+      </if>
+      <if test="areaid != null" >
+        areaId,
+      </if>
+      <if test="ename != null" >
+        ename,
+      </if>
+      <if test="openTime != null" >
+        open_time,
+      </if>
+      <if test="roomsCount != null" >
+        rooms_count,
+      </if>
+      <if test="latitude != null" >
+        latitude,
+      </if>
+      <if test="longitude != null" >
+        longitude,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelid != null" >
+        #{hotelid,jdbcType=BIGINT},
+      </if>
+      <if test="areaid != null" >
+        #{areaid,jdbcType=BIGINT},
+      </if>
+      <if test="ename != null" >
+        #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="openTime != null" >
+        #{openTime,jdbcType=VARCHAR},
+      </if>
+      <if test="roomsCount != null" >
+        #{roomsCount,jdbcType=INTEGER},
+      </if>
+      <if test="latitude != null" >
+        #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="longitude != null" >
+        #{longitude,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.group.travel.pojo.po.TtHotelSuppleExample" resultType="java.lang.Integer" >
+    select count(*) from tt_hotel_supple
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tt_hotel_supple
+    <set >
+      <if test="record.hotelid != null" >
+        hotelId = #{record.hotelid,jdbcType=BIGINT},
+      </if>
+      <if test="record.areaid != null" >
+        areaId = #{record.areaid,jdbcType=BIGINT},
+      </if>
+      <if test="record.ename != null" >
+        ename = #{record.ename,jdbcType=VARCHAR},
+      </if>
+      <if test="record.openTime != null" >
+        open_time = #{record.openTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomsCount != null" >
+        rooms_count = #{record.roomsCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.latitude != null" >
+        latitude = #{record.latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="record.longitude != null" >
+        longitude = #{record.longitude,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tt_hotel_supple
+    set hotelId = #{record.hotelid,jdbcType=BIGINT},
+      areaId = #{record.areaid,jdbcType=BIGINT},
+      ename = #{record.ename,jdbcType=VARCHAR},
+      open_time = #{record.openTime,jdbcType=VARCHAR},
+      rooms_count = #{record.roomsCount,jdbcType=INTEGER},
+      latitude = #{record.latitude,jdbcType=DECIMAL},
+      longitude = #{record.longitude,jdbcType=DECIMAL}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.group.travel.pojo.po.TtHotelSupple" >
+    update tt_hotel_supple
+    <set >
+      <if test="areaid != null" >
+        areaId = #{areaid,jdbcType=BIGINT},
+      </if>
+      <if test="ename != null" >
+        ename = #{ename,jdbcType=VARCHAR},
+      </if>
+      <if test="openTime != null" >
+        open_time = #{openTime,jdbcType=VARCHAR},
+      </if>
+      <if test="roomsCount != null" >
+        rooms_count = #{roomsCount,jdbcType=INTEGER},
+      </if>
+      <if test="latitude != null" >
+        latitude = #{latitude,jdbcType=DECIMAL},
+      </if>
+      <if test="longitude != null" >
+        longitude = #{longitude,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where hotelId = #{hotelid,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.group.travel.pojo.po.TtHotelSupple" >
+    update tt_hotel_supple
+    set areaId = #{areaid,jdbcType=BIGINT},
+      ename = #{ename,jdbcType=VARCHAR},
+      open_time = #{openTime,jdbcType=VARCHAR},
+      rooms_count = #{roomsCount,jdbcType=INTEGER},
+      latitude = #{latitude,jdbcType=DECIMAL},
+      longitude = #{longitude,jdbcType=DECIMAL}
+    where hotelId = #{hotelid,jdbcType=BIGINT}
+  </update>
+</mapper>
