@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-treeview.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sweet-alert.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/ueditor.min.css" />
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.0.js" ></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js" ></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap-table.js" ></script>
@@ -219,9 +220,15 @@
         }
 
     }
-
+    //实例化之前先删除容器
+    UE.delEditor('container');
     //实例化富文本编辑器
-    UE.getEditor('container');
+    //UE.getEditor('container');
+    var ue = UE.getEditor('container', {
+        initialFrameWidth: '100%',
+        initialFrameHeight: '300',
+        serverUrl:'${pageContext.request.contextPath}/file/upload'
+    });
     $(function () {
         //加载商品类别
 
@@ -257,32 +264,6 @@
                     maxItemsDisplay: 1,//按钮上最多显示多少项，如果超出这个数目，将会以‘XX项已被选中代替’
                     //selectToCheck : true,//为了兼容移动设备，点击属性菜单项时自动选中节点
                     onCheck: function (node) {//树形菜单被选中时触发事件, node为选中的那个节点
-                        /*                        alert($("#combotree1").bootstrapCombotree('getValue'))
-                                                $('#combotree2').bootstrapCombotree({
-                                                    defaultLable : '请选择列表',//默认按钮上的文本
-                                                    url:'
-                        ',
-                            data:{},
-                            valueField:'id',
-                            textField:'areaname',
-                            enabled:true,
-                            //multiple:true,开启多选
-                            formatter:function(rec){
-                                rec['areaname'] = rec.areaname+'_';//格式化选择项
-                                return rec;
-                            },
-                            unSelect:function(val,rec){
-                                console.log($('#order_status1').bootstrapSelect('getValue'));
-                            },
-                            onSelect:function(val,rec){
-                                console.log('comb2:'+$('#combotree2').bootstrapSelect('getValue'));//获取选中值
-                                console.log($('#combotree2').bootstrapSelect('getValue'));
-                                $('#combotree2').bootstrapSelect('setValue','2');
-                            },
-                            onBeforeLoad:function(params){
-                                params['areaname'] = '请选择列表';//加载前改变参数username的值
-                            }
-                        });*/
                         var  a = $("#combotree1").bootstrapCombotree('getValue');
                         var cids = [];
                         cids.push(a);
