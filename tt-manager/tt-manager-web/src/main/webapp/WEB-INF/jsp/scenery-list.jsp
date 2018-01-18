@@ -54,9 +54,7 @@
         <button id="btnDown" type="button"  class="btn btn-warning " data-toggle="modal" data-target="#DeleteForm" onclick="down()">
             <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>审核
         </button>
-
     </div>
-
 </div>
 
 <script>
