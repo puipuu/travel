@@ -496,12 +496,14 @@
 
 <script type="text/javascript">
 
-    //解决打开新的新增页面无法显示ueditor
+    //实例化之前先删除容器
     UE.delEditor('container');
     //实例化富文本编辑器
-    var ue = UE.getEditor('container',{
+    //UE.getEditor('container');
+    var ue = UE.getEditor('container', {
         initialFrameWidth: '100%',
-        initialFrameHeight: '400'
+        initialFrameHeight: '300',
+        serverUrl:'${pageContext.request.contextPath}/file/upload'
     });
 
     var can_video = true;
