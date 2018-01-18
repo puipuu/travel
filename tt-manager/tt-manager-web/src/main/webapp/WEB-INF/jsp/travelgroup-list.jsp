@@ -10,28 +10,45 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link href="css/bootstrap-table.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sweet-alert.css" />
+    <script src="${pageContext.request.contextPath}/js/jquery-1.11.0.js" type="text/javascript"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/sweet-alert.min.js" ></script>
     <script src="js/bootstrap.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/bootstrap-table.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
 
 </head>
 <body>
-    <button id="build" type="button" style="height: 28px;"  class="btn btn-success" data-toggle="modal" data-target="" onclick="location.href='${pageContext.request.contextPath}/travelgroup-add'">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加
-    </button>
-    <button id="btnEdit"  type="button" style="height: 28px;" class="btn btn-warning">
-        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>修改
-    </button>
-    <button id="btnDel" type="button" style="height: 28px;" class="btn btn-danger" data-toggle="modal" data-target="#DeleteForm">
-        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>删除
-    </button>
-    <%--<button id="btnUp" type="button" style="height: 28px;" class="btn btn-success" data-toggle="modal" data-target="#DeleteForm" onclick="up()">
-        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>上架
-    </button>
-    <button id="btnDown" type="button" style="height: 28px;" class="btn btn-warning " data-toggle="modal" data-target="#DeleteForm" onclick="down()">
-        <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>下架--%>
-    </button>
+<div id="toolbar">
+
+    <div style="padding-top: 15px;padding-bottom: 15px;"><input  name="title" type="text" style="height: 28px;text-align: right" id="title">
+        状态:<select style="height: 30px;" id="status" name="status">
+            <option value="0">全部</option>
+            <option value="1">正常</option>
+            <option value="2">审核</option>
+        </select>
+
+        <button type="button" class="btn btn-primary" onclick="searchProdutc()">查询</button>
+    </div>
+
+    <div class="heading">
+        <button id="build" type="button"   class="btn btn-success" data-toggle="modal" data-target="" onclick="location.href='${pageContext.request.contextPath}/travelgroup-add'">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加
+        </button>
+        <button id="btnEdit"  type="button"  class="btn btn-warning">
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>修改
+        </button>
+        <button id="btnDel" type="button"  class="btn btn-danger" data-toggle="modal" data-target="#DeleteForm">
+            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>删除
+        </button>
+        <button id="btnUp" type="button"  class="btn btn-success" data-toggle="modal" data-target="#DeleteForm" onclick="up()">
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>上架
+        </button>
+        <button id="btnDown" type="button"  class="btn btn-warning " data-toggle="modal" data-target="#DeleteForm" onclick="down()">
+            <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>审核
+        </button>
+    </div>
+</div>
 <table id="table_server" ></table>
 <script type="text/javascript">
     $(function () {
@@ -110,20 +127,42 @@
     $("#btnDel").click(function () {
         var ids = getIdSelections();
         if (ids.length == 0) {
-            alert('请选中至少一条记录！');
-            return;
+            sweetAlert("你犯了个错误", "请至少选着一条数据!", "error");
+            return ;
         }
-        console.log(ids);
-        $.post(
-            'deleteTravelGroup',
-            {"ids[]": ids},
-            function (data) {
-                if (data > 0) {
-                    $("#table_server").bootstrapTable('refresh',{url : 'http://localhost:8081/travel/travelGroups'});
-                }
-            }
+        sweetAlert({
+            title: "确认要删除?",
+            text: "你将删除这条记录!!!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "是的!确认删除!",
+            closeOnConfirm: false
+        },function (r) {
+            if (r){
+                console.log(ids);
+                $.post(
+                    'deleteTravelGroup',
+                    {"ids[]": ids},
+                    /*function (data) {
+                        if (data > 0) {
+                            $("#table_server").bootstrapTable('refresh',{url : 'http://localhost:8080/travel/travelGroups'});
+                        }
+                    }*/
+                    function (data) {
+                        /*swal("Deleted!",
+                            "你已成功删除!",
+                            "success");
+                        //刷新页面
+                        $('#table_server').bootstrapTable('refresh');*/
+                        swal("Deleted!")
 
-        );
+                    },
+                    // 返回的数据类型，json String类型
+                    'json'
+                );
+            }
+        });
     });
 
     $("#btnEdit").click(function () {
@@ -139,7 +178,6 @@
         console.log(ids);
         window.location.href = 'travelgroup-update?ids[]='+ids;
         /*$.post(
-
             'travelGroupById',
             {"ids[]": ids},
             function (data) {
