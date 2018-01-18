@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="tt-ftp:war exploded">
-    <output-path>$PROJECT_DIR$/tt-ftp/target/tt-ftp</output-path>
+    <output-path>$PROJECT_DIR$/tt-ftp/target/tt-ftp-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -13,7 +13,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/tt-ftp/target/tt-ftp/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/tt-ftp/target/tt-ftp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="tt-ftp/web/Web" />
     </root>
