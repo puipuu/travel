@@ -1,7 +1,7 @@
 package com.group.travel.service.impl;
 
-import com.group.travel.ftp.util.FtpUtils;
 import com.group.travel.service.FileService;
+import com.group.travel.utils.FtpUtils;
 import com.group.travel.utils.IDUtils;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
