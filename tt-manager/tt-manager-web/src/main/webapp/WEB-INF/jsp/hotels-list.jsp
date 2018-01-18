@@ -267,13 +267,16 @@
             {
                 field: 'hotelpicture',
                 title: '酒店图片',
-                editable: {
+/*                editable: {
                     type: 'text',
                     title: '酒店图片',
                     validate: function (v) {
                         if (!v) return '酒店图片不能为空';
 
                     }
+                }*/
+                formatter: function(value,row,index){
+                    return value;
                 }
             },
             {

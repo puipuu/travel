@@ -33,6 +33,10 @@
     <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
     <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
     <script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/language/zh_CN.min.js"></script>
+ <%--   &lt;%&ndash;bookstrap上传&ndash;%&gt;
+    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.6/js/fileinput.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.6/js/locales/zh.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap-fileinput/4.4.6/css/fileinput.min.css" rel="stylesheet">--%>
 </head>
 
 <body>
@@ -95,10 +99,14 @@
         <input type="number" class="form-control" step="0.01" id="price" name="hotelprice" width="50%"
                placeholder="请输入数值" required>
     </div>
-    <div class="form-group ">
+<%--    <div class="form-group ">
         <label for="picture">酒店图片</label>
         <input type="file" class="form-control" id="picture" name="hotelpicture" style="width: auto;height: auto"
                placeholder="请插入图片">
+    </div>--%>
+    <div>
+        <label for="container2">酒店图片</label>
+        <script id="container2" name="hotelpicture" type="text/plain"></script>
     </div>
     <div class="form-group ">
         <label for="leve">酒店等级</label>
@@ -229,6 +237,21 @@
         initialFrameHeight: '300',
         serverUrl:'${pageContext.request.contextPath}/file/upload'
     });
+
+    UE.delEditor('container2');
+    //实例化富文本编辑器
+    //UE.getEditor('container');
+    var ue = UE.getEditor('container2', {
+        toolbars: [
+            ['simpleupload', //单图上传
+             'insertimage' //多图上传
+            ]
+        ],
+        initialFrameWidth: '100%',
+        initialFrameHeight: '300',
+        serverUrl:'${pageContext.request.contextPath}/file/upload'
+    });
+
     $(function () {
         //加载商品类别
 
