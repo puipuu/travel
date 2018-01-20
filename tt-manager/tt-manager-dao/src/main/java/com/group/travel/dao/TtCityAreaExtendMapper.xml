@@ -30,4 +30,30 @@
     from tt_city_area
     WHERE cid=#{cid}
   </select>
+  <select id="selectByCidtoBase" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    from tt_city_area
+    WHERE cid=#{cid}
+  </select>
+  <select id="selectByCidtoBlob" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    from tt_city_area
+    WHERE cid=#{cid}
+  </select>
+  <select id="selectById" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tt_city_area
+    WHERE id=#{id}
+  </select>
+  <select id="selectCountByCid" resultType="Integer">
+    select
+    COUNT(id)
+    from tt_city_area
+    WHERE cid=#{cid}
+  </select>
 </mapper>

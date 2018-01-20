@@ -18,15 +18,74 @@
     <result column="latitude" property="latitude" jdbcType="DECIMAL" />
     <result column="longitude" property="longitude" jdbcType="DECIMAL" />
   </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.group.travel.pojo.vo.TtHotelFull">
+    <result column="hotelNorms" jdbcType="LONGVARCHAR" property="hotelnorms" />
+    <result column="areaName" jdbcType="VARCHAR" property="areaname" />
+  </resultMap>
   <sql id="Base_Column_List" >
     id, hotelName, hotelAddress, cityId, hotelPrice, hotelPicture, hotelleve, cid, status, areaId, ename, open_time, rooms_count, latitude, longitude
   </sql>
+  <sql id="Full_Column_List" >
+    tt_hotel.id, hotelName, hotelAddress, cityId, hotelPrice, hotelPicture, hotelleve, tt_hotel.cid, STATUS, areaId, ename, open_time, rooms_count, latitude, longitude,hotelNorms,areaName
+  </sql>
   <select id="selectBySerch" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from tt_hotel
     left join tt_hotel_supple  on tt_hotel.id=tt_hotel_supple.hotelId
+    where status != 3
+    <if test="id != null">
+      AND tt_hotel.id = #{id,jdbcType=BIGINT}
+    </if>
+    <if test="hotelname != null">
+      AND hotelName  like concat('%',#{hotelname,jdbcType=VARCHAR},'%')
+    </if>
+    <if test="hoteladdress != null">
+      AND hotelAddress like concat('%', #{hoteladdress,jdbcType=VARCHAR},'%')
+    </if>
+    <if test="cityid != null">
+      AND cityId = #{cityid,jdbcType=BIGINT}
+    </if>
+    <if test="hotelprice != null">
+      AND hotelPrice = #{hotelprice,jdbcType=BIGINT}
+    </if>
+    <if test="hotelleve != null">
+      AND hotelleve = #{hotelleve,jdbcType=INTEGER}
+    </if>
+    <if test="cid != null">
+      AND tt_hotel.cid = #{cid,jdbcType=INTEGER}
+    </if>
+    <if test="status != null">
+    AND status = #{status,jdbcType=INTEGER}
+    </if>
+  </select>
+  <select id="selectByOffset" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Full_Column_List" />
+    from tt_hotel
+    left join tt_hotel_supple  on tt_hotel.id=tt_hotel_supple.hotelId
+    left join tt_hotel_des on tt_hotel_des.id=tt_hotel_supple.hotelId
+    LEFT JOIN tt_city_area ON tt_hotel_supple.areaId=tt_city_area.id
     where
-    status != #{status}
+    status = 1
+    <if test="areaid != null and areaid != 0">
+      AND areaId = #{areaid,jdbcType=BIGINT}
+    </if>
+    <if test="cityid != null">
+      AND cityId = #{cityid,jdbcType=BIGINT}
+    </if>
+    limit #{current},10
+  </select>
+  <select id="selectCount" resultType="Integer">
+    select
+    COUNT(tt_hotel.id)
+    from tt_hotel
+    left join tt_hotel_supple  on tt_hotel.id=tt_hotel_supple.hotelId
+    left join tt_hotel_des on tt_hotel_des.id=tt_hotel_supple.hotelId
+    LEFT JOIN tt_city_area ON tt_hotel_supple.areaId=tt_city_area.id
+    WHERE cityId=#{cityid}
+    <if test="areaid != null and areaid != 0">
+      AND areaId = #{areaid,jdbcType=BIGINT}
+    </if>
   </select>
 </mapper>

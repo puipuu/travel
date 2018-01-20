@@ -74,15 +74,19 @@
         <label for="combotree1">区域</label>
         <div id="combotree2"></div>
     </div>
-    <div class="form-group ">
+<%--    <div class="form-group ">
         <label for="latitude">经度</label>
-        <input type="number" class="form-control"  id="latitude" name="latitude" width="50%"
+        <input type="number" class="form-control" step="0.000001" id="latitude" name="latitude" width="50%"
                placeholder="请输入数值" required>
     </div>
     <div class="form-group ">
         <label for="longitude">纬度</label>
-        <input type="number" class="form-control"  id="longitude" name="longitude" width="50%"
+        <input type="number" class="form-control" step="0.000001" id="longitude" name="longitude" width="50%"
                placeholder="请输入数值" required>
+    </div>--%>
+    <div>
+        <label for="container3">酒店经纬度</label>
+        <script id="container3" name="center" type="text/plain"></script>
     </div>
     <div class="form-group ">
         <label for="openTime">酒店开业时间</label>
@@ -190,7 +194,6 @@
 
             var data=$('#hotelAddForm').serialize();
         //序列化获得表单数据，结果为：user_id=12&user_name=John&user_age=20
-
         var submitData=decodeURIComponent(data,true);
         //submitData是解码后的表单数据，结果同上
 
@@ -243,8 +246,22 @@
     //UE.getEditor('container');
     var ue = UE.getEditor('container2', {
         toolbars: [
-            ['simpleupload', //单图上传
-             'insertimage' //多图上传
+            [
+                'source', //源代码
+                'simpleupload' //单图上传
+            ]
+        ],
+        initialFrameWidth: '100%',
+        initialFrameHeight: '300',
+        serverUrl:'${pageContext.request.contextPath}/file/upload'
+    });
+
+    UE.delEditor('container3');
+    //实例化富文本编辑器
+    //UE.getEditor('container');
+    var ue = UE.getEditor('container3', {
+        toolbars: [
+            ['map' //Baidu地图
             ]
         ],
         initialFrameWidth: '100%',

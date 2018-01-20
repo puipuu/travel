@@ -2,6 +2,8 @@ package com.group.travel.service;
 
 import com.group.travel.pojo.po.TtHotel;
 import com.group.travel.pojo.po.TtHotelSupple;
+import com.group.travel.pojo.vo.Page;
+import com.group.travel.pojo.vo.TtHotelFull;
 import com.group.travel.pojo.vo.TtHotelUn;
 
 import java.util.List;
@@ -31,4 +33,10 @@ public interface HotelsService {
     List<TtHotel> listHotelsSerch(TtHotel hotel);
 
     int saveHotel(TtHotel hotel, String hotelDesc, TtHotelSupple supple);
+
+    List<TtHotelFull> listHotelsByOffset(Long cid,Long areaid,Long current);
+
+    List<TtHotelUn> listHotels(TtHotel hotel);
+
+    Page getPageInfo(Page page);
 }

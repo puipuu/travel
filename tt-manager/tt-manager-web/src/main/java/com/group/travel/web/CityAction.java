@@ -3,6 +3,7 @@ package com.group.travel.web;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
 import com.group.travel.pojo.po.TtCityArea;
+import com.group.travel.pojo.po.TtCityDes;
 import com.group.travel.pojo.po.TtHotel;
 import com.group.travel.service.CityService;
 import org.apache.ibatis.annotations.Param;
@@ -87,6 +88,20 @@ public class CityAction {
         int i = 0;
         try {
             i = cityService.addArea(area);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/ttcity/cityDes")
+    public int cityDesAdd(TtCityDes des){
+
+        int i = 0;
+        try {
+            i = cityService.addCityDes(des);
         } catch (Exception e) {
             e.printStackTrace();
         }
