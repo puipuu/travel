@@ -59,9 +59,17 @@ public class HotelsAction {
             e.printStackTrace();
         }
         return  list;*/
-        List<TtHotelUn> list = null;
+/*        List<TtHotelUn> list = null;
         try {
             list = hotelsService.listHotels();
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;*/
+        List<TtHotelUn> list = null;
+        try {
+            list = hotelsService.listHotels(hotel);
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();
@@ -71,9 +79,23 @@ public class HotelsAction {
 
     @ResponseBody
     @RequestMapping(value = "/hotel",method = RequestMethod.POST)
-    public int saveHotel(TtHotel hotel,String hotelDesc,TtHotelSupple supple){
+    public int saveHotel(TtHotel hotel,String hotelDesc,TtHotelSupple supple,String center){
         int i = 0;
         try{
+            String string = center.substring(center.indexOf("center=")+1,center.length());
+            String lat=string.substring("center=".length(),string.indexOf(","));
+            String lon=string.substring(string.indexOf(",")+1,string.length());
+            Long latitude=Long.valueOf(lat.replace(".", ""));
+            Long longitude=Long.valueOf(lon.replace(".", ""));
+            supple.setLatitude(latitude);
+            supple.setLongitude(longitude);
+            hotelDesc = hotelDesc.replaceFirst("<p>", "");
+            hotelDesc = hotelDesc.replaceFirst("</p>", "");
+            String pir = hotel.getHotelpicture();
+            pir = pir.replaceFirst("<p>", "");
+            pir = pir.replaceFirst("</p>", "");
+            hotel.setHotelpicture(pir);
+            System.out.println("center"+center+"latitude"+latitude+"longitude"+longitude);
             i = hotelsService.saveHotel(hotel,hotelDesc,supple);
         }catch (Exception e) {
             logger.error(e.getMessage(), e);

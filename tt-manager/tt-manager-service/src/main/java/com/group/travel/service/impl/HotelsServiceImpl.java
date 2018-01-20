@@ -5,6 +5,8 @@ import com.group.travel.pojo.po.TtHotel;
 import com.group.travel.pojo.po.TtHotelDes;
 import com.group.travel.pojo.po.TtHotelExample;
 import com.group.travel.pojo.po.TtHotelSupple;
+import com.group.travel.pojo.vo.Page;
+import com.group.travel.pojo.vo.TtHotelFull;
 import com.group.travel.pojo.vo.TtHotelUn;
 import com.group.travel.service.HotelsService;
 import com.group.travel.utils.IDUtils;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -122,6 +125,122 @@ public class HotelsServiceImpl implements HotelsService {
             e.printStackTrace();
         }
         return i;
+    }
+
+    @Override
+    public List<TtHotelFull> listHotelsByOffset(Long cid,Long areaid,Long current) {
+        List<TtHotelFull> list = null;
+        try {
+            TtHotelFull hotel = new TtHotelFull();
+            current = current-1;
+            hotel.setCurrent(current);
+            hotel.setCityid(cid);
+            if (cid==areaid){
+                hotel.setAreaid(Long.valueOf(0));
+            }else {
+                hotel.setAreaid(areaid);
+            }
+            list = hotelSuppleUnDao.selectByOffset(hotel);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @Override
+    public List<TtHotelUn> listHotels(TtHotel hotel) {
+        List<TtHotelUn> list = null;
+        try {
+            TtHotel ttHotel = new TtHotel();
+            if (hotel.getStatus() == 0 ){
+                ttHotel.setHotelname(hotel.getHotelname());
+                list = hotelSuppleUnDao.selectBySerch(ttHotel);
+            }else {
+                list = hotelSuppleUnDao.selectBySerch(hotel);
+            }
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @Override
+    public Page getPageInfo(Page page) {
+        int count = 0;
+        try {
+            if (page.getAreaid()==page.getCityid()){
+                Page page1 = new Page();
+                page1.setAreaid(Long.valueOf(0));
+                page1.setCityid(page.getCityid());
+                count  = hotelSuppleUnDao.selectCount(page1);
+            }else {
+                count  = hotelSuppleUnDao.selectCount(page);
+            }
+
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        Integer curent = page.getCurrent();
+        List<Integer> pages = new ArrayList<>();
+        int total = 0;
+        if (count%10 == 0){
+            total = count/10;
+        }else {
+            total = count/10+1;
+        }
+        List<Integer> page5 = new ArrayList<>();
+        for (int i = 1; i <= 5; i++) {
+            page5.add(i);
+        }
+        if (curent < 4){
+            if (total > 4) {
+                pages = page5;
+            }else {
+                for (int i = 1; i <= total; i++) {
+                    pages.add(i);
+                }
+            }
+            page.setPages(pages);
+        }else if (curent < 9) {
+            if (total >= (curent + 2)){
+                for (int i = 1; i <= (curent + 2); i++) {
+                    pages.add(i);
+                }
+            }else if (total == (curent + 1)){
+                for (int i = 1; i <= (curent + 1); i++) {
+                    pages.add(i);
+                }
+            }else {
+                for (int i = 1; i <= total; i++) {
+                    pages.add(i);
+                }
+            }
+            page.setPages(pages);
+        }else {
+            if (total >= (curent + 2)){
+                pages = page5;
+                for (int i = (curent - 2); i <= 5; i++) {
+                    pages.add(i);
+                }
+            }else if (total == (curent + 1)){
+                pages = page5;
+                for (int i = (curent - 2); i <= 4; i++) {
+                    pages.add(i);
+                }
+            }else {
+                pages = page5;
+                for (int i = (curent - 2); i <= 3; i++) {
+                    pages.add(i);
+                }
+            }
+            page.setPages(pages);
+        }
+        page.setCount(count);
+        page.setTotal(total);
+        return page;
     }
 
 /*    @Override
