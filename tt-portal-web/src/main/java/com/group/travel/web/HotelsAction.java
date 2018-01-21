@@ -34,7 +34,7 @@ public class HotelsAction {
     @Autowired
     private CityService cityService;
 
-    @RequestMapping(value = "/hotel/{id}.html",method = RequestMethod.GET)
+    @RequestMapping(value = "/hotels/{id}.html",method = RequestMethod.GET)
     public String  getHotelsById(@PathVariable("id") Long id,Model model){
         TtCity city = cityService.CityById(id);
         int count = cityService.areaCount(id);
@@ -43,6 +43,17 @@ public class HotelsAction {
         model.addAttribute("city",city);
         model.addAttribute("count",count);
         return "hotels";
+    }
+
+    @RequestMapping(value = "/hotel/{id}.html",method = RequestMethod.GET)
+    public String  getHotelById(@PathVariable("id") Long id,Model model){
+        List<TtCityArea> list = null;
+        return  "hotel";
+    }
+
+    @RequestMapping(value = "/hotel",method = RequestMethod.GET)
+    public String  toHotel(){
+        return  "hotel-city";
     }
 
     @ResponseBody
