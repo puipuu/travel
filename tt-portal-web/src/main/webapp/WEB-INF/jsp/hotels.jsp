@@ -16,7 +16,7 @@
     <meta name="Keywords" content="${city.name}酒店预订，${city.name}酒店价格查询，${city.name}酒店推荐" />
 
     <link href="http://css.mafengwo.net/css/cv/css+base:css+jquery.suggest:css+plugins:css+plugins+jquery.jgrowl:css+other+popup:css+mfw-header.2015^YlVS^1493708283.css" rel="stylesheet" type="text/css" />
-
+    <%--<script language="javascript" src="${pageContext.request.contextPath}/js/mangfeng.js" type="text/javascript" crossorigin="anonymous"></script>--%>
     <script language="javascript" src="http://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:js+M+Log:js+m.statistics:js+advert+inspector^alw^1511419343.js" type="text/javascript" crossorigin="anonymous"></script>
     <script type="text/javascript">
         var __mfw_uid = parseInt('0');
@@ -346,25 +346,6 @@
             <div class="hotel-suggest simsun" id="_j_search_suggest" style="display:none;"></div>
             <a class="hs-icon hs-icon-search" href="javascript:;" id="_j_search_btn"></a>
         </div>
-        <div class="hs-item hs-item-date-wrapper" id="_j_booking_date">
-            <div class="hs-item hs-item-date" id="_j_check_in_date">
-                <span></span>
-                <input type="text" placeholder="入住日期" readonly>
-                <i class="hs-icon hs-icon-date"></i>
-            </div>
-            <div class="hs-item hs-item-date" id="_j_check_out_date">
-                <span></span>
-                <input type="text" placeholder="离店日期" readonly>
-                <i class="hs-icon hs-icon-date"></i>
-            </div>
-        </div>
-        <div class="hs-item hs-item-people" id="_j_booking_number_guests">
-            <span>人数</span>
-            <i class="icon-person"></i>
-        </div>
-        <div class="hs-item hs-item-action" id="_j_price_btn">
-            <a class="hs-btn" href="javascript:;">查看价格</a>
-        </div>
     </div>
     <div class="area-main clearfix">
         <div class="area-wrapper" id="_j_area_wrapper" style="display:none;">
@@ -605,10 +586,6 @@
 
                                 <i class="icon-alipay" style=""></i>
                                 <i class="icon-wxpay" style=""></i>
-
-
-
-
                             </div>
                             <p class="tips" style="display:none;"></p>
                         </div>
@@ -993,7 +970,7 @@
         <a role="button" class="btn">
             <i class="icon_code"></i>
         </a>
-        <a role="button" class="mfw-code _j_code">
+        <a role="button" class="mfw-code _j_code" >
 
             <img src="https://n3-q.mafengwo.net/s9/M00/01/7B/wKgBs1gjDcmAKFXuAAERZRJ4yus61.jpeg " width="300" height="192">
         </a>
@@ -1007,11 +984,11 @@
     </div>
 </div>
 
-<script language="javascript" type="text/javascript">
+<%--<script language="javascript" type="text/javascript">
     if(typeof M !== "undefined" && typeof M.loadResource === "function") {
         M.loadResource("http://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+AHeader:js+jquery.jgrowl.min:js+hotel+mfwmap+mfwmap-util:js+hotel+mfwmap+mfwmap-event:js+hotel+mfwmap+mfwmap-runtime-google:js+hotel+mfwmap+mfwmap-runtime-amap:js+hotel+mfwmap+mfwmap-runtime-leaflet:js+hotel+mfwmap+mfwmap:js+hotel+mfwmap+mfwmap-overlays:js+hotel+module+ListTips:js+M+module+Storage:js+hotel+module+Log:js+hotel+module+Search:js+hotel+module+Hash:js+xdate:js+hotel+module+ModuleProvider:js+hotel+module+BookingDate:js+hotel+module+BookingGuests:js+hotel+list_mvc_model:js+corelib+handlebars-2.0.0:js+hotel+module+FestivalDateConfig:js+jquery-ui-core:js+jquery-ui-datepicker:js+hotel+module+DateRangePicker:js+hotel+module+NumberGuestsPicker:js+hotel+list_mvc_filter_view:js+jquery.scrollTo:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+dialog+alert:js+hotel+module+FavDialog:js+hotel+list_mvc_data_view:js+hotel+list_v6:js+M+module+PageAdmin:js+M+module+Cookie:js+M+module+ResourceKeeper:js+AMessage:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^YlZXSg^1515641871.js");
     }
-</script>
+</script>--%>
 <script>
     $("#_j_area_wrapper").css('display','block');
 
@@ -1061,26 +1038,20 @@
                     var areaid = Data[i].areaid;
                     var areaname = Data[i].areaname;
                     var html = '<div class="hotel-item clearfix _j_hotel_item" id="hotels" data-id="'+id+'" data-is-merge_room="0" data-name="'+name+'" data-lat="'+
-                        lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
-                        hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" title="'+
+                        lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="${pageContext.request.contextPath}/hotel/'+id+'.html" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
+                        hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="${pageContext.request.contextPath}/hotel/'+id+'.html" class="_j_hotel_info_link" target="_blank" title="'+
                         name+ename+'" data-cs-p="标题">'+name+'</a></h3><a href="/hotel/activity/pigeon/index" target="_blank"><i class="icon-bird"></i></a><br><span>'+
                         ename+'</span><span class="hotel-rate rate2"></span></div></div><div class="hotel-info "><p class="summary" title="'+
-                        hotelnorms+'">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
-                        areaid+'">'+areaname+ '</a></span><i class="icon-subway"></i></div></div></div>' ;
+                        hotelnorms+'" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
+                        areaid+'">'+areaname+ '</a></span><i class="icon-subway"></i></div></div>' ;
                     /*$("#area").prepend(html)*/
-                    $("#_j_hotel_list").append(html)
+                    var hotelprice =Data[i].hotelprice;
+                    var htmlpay = '<div class="hotel-btns"><a class="btn-booking _j_booking_btn" href="${pageContext.request.contextPath}/hotel/'+
+                        id+'.html" rel="nofollow"><div class="ota"><div class="name"><strong><img src="http://images.mafengwo.net/images/hotel/ota/mafengwo_w100h20_2x_3.png" height="20" width="100"></strong><i class="icon-alipay" style=""></i><i class="icon-wxpay" style=""></i>'+
+                        '</div><p class="tips" style="display:none;"></p></div><div class="price _j_booking_price" style="display:block;"><strong>￥</strong><strong>'+
+                        hotelprice+'</strong><i class="arrow"></i></div><div class="price _j_booking_sold_out" style="display:none;"><span>已售罄</span></div></a></div></div>';
+                    $("#_j_hotel_list").append(html+htmlpay)
                     setTimeout(function(){$("#_j_hotel_list_loading").css('display','none');},3000);
-
-/*                <div class="page-hotel" align="right" id="list_paginator" rel="nofollow"><span class="count">共<span>196</span>页 / <span>3913</span>家旅店</span>
-                    <a class="ti first _j_pageitem" data-value="1" rel="nofollow">首页</a>
-                    <a class="ti _j_pageitem prev" data-value="2" rel="nofollow">前一页</a>
-                        <span class="this-page" data-value="1" rel="nofollow">1</span>
-                        <a class="ti _j_pageitem" data-value="2" rel="nofollow">2</a>
-                    <a class="ti _j_pageitem" data-value="3" rel="nofollow">3</a>
-                        <a class="ti _j_pageitem" data-value="4" rel="nofollow">4</a>
-                        <a class="ti _j_pageitem" data-value="5" rel="nofollow">5</a>
-                        <a class="ti _j_pageitem prev" data-value="2" rel="nofollow">后一页</a><a class="ti first _j_pageitem" data-value="196" rel="nofollow">末页</a></div>
-                    </div>*/
 
                 }
                 $.ajax({
@@ -1197,14 +1168,19 @@
                         var areaid = Data[i].areaid;
                         var areaname = Data[i].areaname;
                         var html = '<div class="hotel-item clearfix _j_hotel_item" id="hotels" data-id="'+hotelId+'" data-is-merge_room="0" data-name="'+name+'" data-lat="'+
-                            lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
-                            hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" title="'+
+                            lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="${pageContext.request.contextPath}/hotel/\'+hotelId+\'.html?" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
+                            hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="${pageContext.request.contextPath}/hotel/'+hotelId+'.html" class="_j_hotel_info_link" target="_blank" title="'+
                             name+ename+'" data-cs-p="标题">'+name+'</a></h3><a href="/hotel/activity/pigeon/index" target="_blank"><i class="icon-bird"></i></a><br><span>'+
                             ename+'</span><span class="hotel-rate rate2"></span></div></div><div class="hotel-info "><p class="summary" title="'+
-                            hotelnorms+'">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
-                            areaid+'">'+areaname+ '</a></span><i class="icon-subway"></i></div></div></div>' ;
+                            hotelnorms+'" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
+                            areaid+'">'+areaname+ '</a></span><i class="icon-subway"></i></div></div>' ;
                         /*$("#area").prepend(html)*/
-                        $("#_j_hotel_list").append(html)
+                        var hotelprice =Data[i].hotelprice;
+                        var htmlpay = '<div class="hotel-btns"><a class="btn-booking _j_booking_btn" href="${pageContext.request.contextPath}/hotel/'+
+                            hotelId+'.html" rel="nofollow"><div class="ota"><div class="name"><strong><img src="http://images.mafengwo.net/images/hotel/ota/mafengwo_w100h20_2x_3.png" height="20" width="100"></strong><i class="icon-alipay" style=""></i><i class="icon-wxpay" style=""></i>'+
+                            '</div><p class="tips" style="display:none;"></p></div><div class="price _j_booking_price" style="display:block;"><strong>￥</strong><strong>'+
+                            hotelprice+'</strong><i class="arrow"></i></div><div class="price _j_booking_sold_out" style="display:none;"><span>已售罄</span></div></a></div></div>';
+                        $("#_j_hotel_list").append(html+htmlpay)
                         setTimeout(function(){$("#_j_hotel_list_loading").css('display','none');},3000);
                     }
                     $.ajax({
@@ -1299,14 +1275,19 @@
                         var areaid = Data[i].areaid;
                         var areaname = Data[i].areaname;
                         var html = '<div class="hotel-item clearfix _j_hotel_item" id="hotels" data-id="'+hotelId+'" data-is-merge_room="0" data-name="'+name+'" data-lat="'+
-                            lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
-                            hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" title="'+
+                            lat+'" data-lng="'+lng+'" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布"><div class="hotel-pic"><a href="${pageContext.request.contextPath}/hotel/'+hotelId+'.html" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">' +
+                            hotelpicture +'</a></div><div class="hotel-title"><div class="title"><h3><a href="${pageContext.request.contextPath}/hotel/'+hotelId+'.html" class="_j_hotel_info_link" target="_blank" title="'+
                             name+ename+'" data-cs-p="标题">'+name+'</a></h3><a href="/hotel/activity/pigeon/index" target="_blank"><i class="icon-bird"></i></a><br><span>'+
                             ename+'</span><span class="hotel-rate rate2"></span></div></div><div class="hotel-info "><p class="summary" title="'+
-                            hotelnorms+'">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
-                            areaid+'">'+areaname+ '</a></span><i class="icon-subway"></i></div></div></div>' ;
+                            hotelnorms+'" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">'+hotelnorms+'</p><div class="location"><span><i class="icon-location"></i>位于: <a href="javascript:;" class="_j_area_name" data-id="'+
+                            areaid+'" >'+areaname+ '</a></span><i class="icon-subway"></i></div></div>' ;
                         /*$("#area").prepend(html)*/
-                        $("#_j_hotel_list").append(html)
+                        var hotelprice =Data[i].hotelprice;
+                        var htmlpay = '<div class="hotel-btns"><a class="btn-booking _j_booking_btn" href="${pageContext.request.contextPath}/hotel/'+
+                            hotelId+'.html" rel="nofollow"><div class="ota"><div class="name"><strong><img src="http://images.mafengwo.net/images/hotel/ota/mafengwo_w100h20_2x_3.png" height="20" width="100"></strong><i class="icon-alipay" style=""></i><i class="icon-wxpay" style=""></i>'+
+                            '</div><p class="tips" style="display:none;"></p></div><div class="price _j_booking_price" style="display:block;"><strong>￥</strong><strong>'+
+                            hotelprice+'</strong><i class="arrow"></i></div><div class="price _j_booking_sold_out" style="display:none;"><span>已售罄</span></div></a></div></div>';
+                        $("#_j_hotel_list").append(html+htmlpay)
                         setTimeout(function(){$("#_j_hotel_list_loading").css('display','none');},3000);
                     }
                     $.ajax({

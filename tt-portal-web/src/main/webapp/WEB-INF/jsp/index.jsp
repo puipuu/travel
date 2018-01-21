@@ -48,7 +48,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="head-nav-hotel" data-cs-p="hotel"><a href="http://www.mafengwo.cn/hotel/" title="酒店">酒店</a></li>
+                <li class="head-nav-hotel" data-cs-p="hotel"><a href="/travel/hotel/" title="酒店">酒店</a></li>
                 <li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">论坛</a></li>
 
 

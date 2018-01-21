@@ -133,7 +133,7 @@ public class HotelsServiceImpl implements HotelsService {
         try {
             TtHotelFull hotel = new TtHotelFull();
             current = current-1;
-            hotel.setCurrent(current);
+            hotel.setCurrent((current*10));
             hotel.setCityid(cid);
             if (cid==areaid){
                 hotel.setAreaid(Long.valueOf(0));
@@ -178,7 +178,6 @@ public class HotelsServiceImpl implements HotelsService {
             }else {
                 count  = hotelSuppleUnDao.selectCount(page);
             }
-
         }catch (Exception e){
             logger.error(e.getMessage(),e);
             e.printStackTrace();
