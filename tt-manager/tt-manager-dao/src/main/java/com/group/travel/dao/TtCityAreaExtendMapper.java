@@ -10,4 +10,12 @@ public interface TtCityAreaExtendMapper {
     List<TtCityArea> selectByIsParent();
 
     List<TtCityArea> selectByCid(TtCityArea area);
+
+    List<TtCityArea> selectByCidtoBase(TtCityArea area);
+
+    List<TtCityArea> selectByCidtoBlob(TtCityArea area);
+
+    TtCityArea selectById(TtCityArea area);
+
+    int selectCountByCid(TtCityArea area);
 }

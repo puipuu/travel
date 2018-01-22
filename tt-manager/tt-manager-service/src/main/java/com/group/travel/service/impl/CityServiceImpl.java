@@ -1,12 +1,10 @@
 package com.group.travel.service.impl;
 
-import com.group.travel.dao.TtCityAreaExtendMapper;
-import com.group.travel.dao.TtCityAreaMapper;
-import com.group.travel.dao.TtCityExtendMapper;
-import com.group.travel.dao.TtCityMapper;
+import com.group.travel.dao.*;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
 import com.group.travel.pojo.po.TtCityArea;
+import com.group.travel.pojo.po.TtCityDes;
 import com.group.travel.pojo.po.TtCityExample;
 import com.group.travel.service.CityService;
 import com.group.travel.utils.IDUtils;
@@ -37,6 +35,8 @@ public class CityServiceImpl implements CityService{
     private TtCityAreaMapper cityAreaDao;
     @Autowired
     private TtCityAreaExtendMapper areaExtendDao;
+    @Autowired
+    private TtCityDesMapper cityDesDao;
 
     @Override
     public List<TtCity> listCitys() {
@@ -157,6 +157,85 @@ public class CityServiceImpl implements CityService{
             e.printStackTrace();
         }
         return  list;
+    }
+
+    @Override
+    public List<TtCityArea> listAreaByCidtoCity(Long id) {
+        List<TtCityArea> list = null;
+        try {
+            TtCityArea area = new TtCityArea();
+            area.setCid(id);
+            list = areaExtendDao.selectByCidtoBase(area);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  list;
+    }
+
+    @Override
+    public TtCity CityById(Long id) {
+        TtCity city = null;
+        try {
+            city = cityDao.selectByPrimaryKey(id);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  city;
+    }
+
+    @Override
+    public int areaCount(Long id) {
+        int i = 0;
+        try {
+            TtCityArea area = new TtCityArea();
+            area.setCid(id);
+            i = areaExtendDao.selectCountByCid(area);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
+    }
+
+    @Transactional
+    @Override
+    public int addCityDes(TtCityDes des) {
+        int i = 0;
+        try {
+            i = cityDesDao.insertSelective(des);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(i);
+        return i;
+    }
+
+    @Override
+    public TtCityDes CityDesById(Long id) {
+        TtCityDes des = null;
+        try {
+            des = cityDesDao.selectByPrimaryKey(id);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  des;
+    }
+
+    @Override
+    public TtCityArea CityAreaById(Long id) {
+        TtCityArea area = null;
+        try {
+            TtCityArea area1 = new TtCityArea();
+            area1.setId(id);
+            area = areaExtendDao.selectById(area1);
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  area;
     }
 
 /*    public List<TreeNode> listNodes(Long parentId){

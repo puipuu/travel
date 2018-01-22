@@ -3,6 +3,7 @@ package com.group.travel.service;
 import com.group.travel.dto.TreeNode;
 import com.group.travel.pojo.po.TtCity;
 import com.group.travel.pojo.po.TtCityArea;
+import com.group.travel.pojo.po.TtCityDes;
 
 import java.util.List;
 
@@ -24,4 +25,16 @@ public interface CityService {
     List<TtCityArea> listAreaByCid();
 
     List<TreeNode> listAreaByCid(Long cid);
+
+    List<TtCityArea> listAreaByCidtoCity(Long id);
+
+    TtCity CityById(Long id);
+
+    int areaCount(Long id);
+
+    int addCityDes(TtCityDes des);
+
+    TtCityDes CityDesById(Long id);
+
+    TtCityArea CityAreaById(Long id);
 }
