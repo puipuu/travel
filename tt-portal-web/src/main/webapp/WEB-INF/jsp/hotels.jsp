@@ -545,14 +545,14 @@
     <div class="n-content">
         <div class="hotel-loading" id="_j_hotel_list_loading"><i class="loading-m"></i></div>
         <div class="hotel-list" id="_j_hotel_list">
-            <div class="hotel-item clearfix _j_hotel_item" data-id="15059" data-is-merge_room="0" data-name="锦江之星杭州西湖大道酒店" data-lat="30.24519" data-lng="120.17079" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布">
-                <div class="hotel-pic">
+<%--            <div class="hotel-item clearfix _j_hotel_item" data-id="15059" data-is-merge_room="0" data-name="锦江之星杭州西湖大道酒店" data-lat="30.24519" data-lng="120.17079" data-is-airbnb="0" data-cs-t="酒店list页点击入口分布">--%>
+<%--                <div class="hotel-pic">
                     <a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" data-cs-p="图片">
                         <img src="http://n2-q.mafengwo.net/s5/M00/D4/6C/wKgB3FILszGAQF4GAArpylI-cyU77.jpeg?imageMogr2%2Fthumbnail%2F%21660x480r%2Fgravity%2FCenter%2Fcrop%2F%21660x480%2Fquality%2F90" alt="锦江之星杭州西湖大道酒店预订" style="width: 330px;">
                     </a>
 
-                </div>
-                <div class="hotel-title">
+                </div>--%>
+<%--                <div class="hotel-title">
                     <div class="title">
                         <h3><a href="/hotel/15059.html?iMddid=10156" class="_j_hotel_info_link" target="_blank" title="锦江之星杭州西湖大道酒店 Jinjiang Inn Hangzhou Xihu Avenue Branch" data-cs-p="标题">锦江之星杭州西湖大道酒店</a></h3>
                         <a href="/hotel/activity/pigeon/index" target="_blank"><i class="icon-bird"></i></a>
@@ -560,8 +560,8 @@
                         <span>Jinjiang Inn Hangzhou Xihu Avenue Branch</span>
                         <span class="hotel-rate rate2"></span>
                     </div>
-                </div>
-                <div class="hotel-info ">
+                </div>--%>
+<%--                <div class="hotel-info ">--%>
 <%--                    <ul class="nums clearfix">
                         <li class="rating rating2">
                             <em>8.9</em>分
@@ -571,14 +571,14 @@
                         <li class="split"></li>
                         <li><a href="/hotel/15059.html?iMddid=10156#anchor=comment" class="_j_hotel_info_link" target="_blank"><em>16篇</em><br>游记提及</a></li>
                     </ul>--%>
-                    <p class="summary" title="酒店位于南宋御街上，周边景点非常多，晚上出去逛逛很方便，街上还有一家人爆多的冷饮店，可以去尝试。">酒店位于南宋御街上，周边景点非常多，晚上出去逛逛很方便，街上还有一家人爆多的冷饮店，可以去尝试。</p>
+<%--                    <p class="summary" title="酒店位于南宋御街上，周边景点非常多，晚上出去逛逛很方便，街上还有一家人爆多的冷饮店，可以去尝试。">酒店位于南宋御街上，周边景点非常多，晚上出去逛逛很方便，街上还有一家人爆多的冷饮店，可以去尝试。</p>
                     <div class="location">
                         <span><i class="icon-location"></i>位于: <a href="/hotel/area_11912.html" data-id="11912" data-type="area">西湖</a></span>
                         <i class="icon-subway"></i>
                     </div>
 
-                </div>
-                <div class="hotel-btns">
+                </div>--%>
+<%--                <div class="hotel-btns">
                     <a class="btn-booking _j_booking_btn" href="javascript:" rel="nofollow" style="" data-ota="youyu_pkg" data-url="/booking/go2booking.php?from=hotel_list_new&amp;mddid=10156&amp;poi_id=15059&amp;to=youyu_pkg&amp;j=http%3A%2F%2Fwww.mafengwo.cn%2Fhotel_zx%2Fhotel%2Findex.php%3FiId%3D819189%26sRoom%3D1" data-price="266" data-is-cache-price="0" data-is-sold-out="0" data-pay-type="" data-ota-id="14">
                         <div class="ota">
                             <div class="name">
@@ -597,7 +597,7 @@
                             <span>已售罄</span>
                         </div>
                     </a>
-                </div>
+                </div>--%>
 <%--                <div class="hotel-other">
                     <div class="collect">
                         <a class="btn-addCollect _j_add_fav" href="javascript:;" data-id="15059" data-type_id="2" data-cs-p="收藏"><i></i>
