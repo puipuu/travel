@@ -40,7 +40,8 @@
     <!--静态资源解析-->
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/css/**" location="/css/"/>
-    <!--<mvc:resources mapping="/images/**" location="/images/"/>-->
+    <mvc:resources mapping="/images/**" location="/images/"/>
+    <mvc:resources mapping="/layui/**" location="/layui/"/>
     <!--<mvc:resources mapping="/font/**" location="/font/"/>-->
     <!--<mvc:resources mapping="/My97DatePicker/**" location="/My97DatePicker/"/>-->
     <mvc:resources mapping="/ueditor/**" location="/ueditor/"/>
