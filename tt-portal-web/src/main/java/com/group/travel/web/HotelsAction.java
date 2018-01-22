@@ -37,10 +37,12 @@ public class HotelsAction {
     @RequestMapping(value = "/hotels/{id}.html",method = RequestMethod.GET)
     public String  getHotelsById(@PathVariable("id") Long id,Model model){
         TtCity city = cityService.CityById(id);
+        TtCity cityC = cityService.CityByIdC(city);
         int count = cityService.areaCount(id);
         TtCityDes des = cityService.CityDesById(id);
         model.addAttribute("des",des);
         model.addAttribute("city",city);
+        model.addAttribute("cityC",cityC);
         model.addAttribute("count",count);
         return "hotels";
     }

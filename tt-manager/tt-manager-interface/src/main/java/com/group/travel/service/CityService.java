@@ -37,4 +37,6 @@ public interface CityService {
     TtCityDes CityDesById(Long id);
 
     TtCityArea CityAreaById(Long id);
+
+    TtCity CityByIdC(TtCity city);
 }

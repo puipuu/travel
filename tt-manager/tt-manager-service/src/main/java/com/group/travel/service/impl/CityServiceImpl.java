@@ -238,6 +238,21 @@ public class CityServiceImpl implements CityService{
         return  area;
     }
 
+    @Override
+    public TtCity CityByIdC(TtCity city) {
+        TtCity cityc = null;
+        try {
+            cityc = cityDao.selectByPrimaryKey(Long.valueOf(city.getParentid()));
+            if (cityc.getParentid() != 0){
+                CityByIdC(cityc);
+            }
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return  cityc;
+    }
+
 /*    public List<TreeNode> listNodes(Long parentId){
         criteria.andParentidEqualTo(Integer.valueOf(city.getId().toString()));
     }*/

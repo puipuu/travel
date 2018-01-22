@@ -306,7 +306,7 @@
                     <div class="bd" style="width:auto">
                         <i class="arrow"><b></b></i>
                         <div class="col">
-                            <h3>中国其他城市</h3>
+                            <h3>${cityC.name}其他城市</h3>
                             <ul class="clearfix">
                                 <li>
                                     <a href="/hotel/10065/" target="_blank" title="北京酒店推荐">北京<span>Beijing</span></a>
