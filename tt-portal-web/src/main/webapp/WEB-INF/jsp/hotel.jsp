@@ -20,16 +20,7 @@
 
     <link href="http://css.mafengwo.net/css/cv/css+base:css+jquery.suggest:css+plugins:css+plugins+jquery.jgrowl:css+other+popup:css+mfw-header.2015^YlVS^1493708283.css" rel="stylesheet" type="text/css"/>
 
-
     <link href="http://css.mafengwo.net/css/cv/css+hotel+detail:css+hotel+datepicker-range:css+hotel_pop:css+mdd+hotel_fav:css+mdd+map-mark.v2:css+hotel+number_guests_picker:css+jquery-ui-1.9.1.custom.min^YlBU^1504769701.css" rel="stylesheet" type="text/css"/>
-
-
-
-
-
-
-
-
 
     <script language="javascript" src="http://js.mafengwo.net/js/cv/js+jquery-1.8.1.min:js+global+json2:js+M+Module:js+M+M:js+M+Log:js+m.statistics:js+advert+inspector^alw^1511419343.js" type="text/javascript" crossorigin="anonymous"></script>
 
