@@ -48,9 +48,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-sales hide _j_sales_top" id="_j_sales_panel" data-cs-t="sales_nav">
                         <ul>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/" data-sales-nav="机票＋酒店">机票＋酒店<i class="i-hot">hot</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/0-0-0-0-0-0-0-0.html?group=4" data-sales-nav="跟团游">跟团游</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/localdeals/" data-sales-nav="当地游">当地游</a></li>
+                            <%--<li><a target="_blank" href="${pageContext.request.contextPath}/hotels" data-sales-nav="酒店">酒店<i class="i-hot">hot</i></a></li>--%>
+                            <li><a target="_blank" href="${pageContext.request.contextPath}/cus-travelgroup" data-sales-nav="跟团游">跟团游</a></li>
+                            <li><a target="_blank" href="${pageContext.request.contextPath}/local-list" data-sales-nav="当地游">当地游</a></li>
                             <%--<li><a target="_blank" href="https://www.mafengwo.cn/flight/" data-sales-nav="国内机票">国内机票<i class="i-new">new</i></a></li>--%>
                             <%--<li><a target="_blank" href="https://www.mafengwo.cn/sales/visa/" data-sales-nav="签证">签证</a></li>--%>
                             <%--<li><a target="_blank" href="http://zuche.mafengwo.cn/?utm_source=i22590029-pc&utm_medium=partner&utm_campaign=entry&utm_term=mfw_nav" data-sales-nav="国际租车">国际租车</a></li>--%>
@@ -231,23 +231,23 @@
     <div class="ap-wrap">
         <div class="ap-main">
             <form class="forms" id="infoform" action="#" method="post" enctype="multipart/form-data" target="postinfo">
-                <%--<dl class="title cf">--%>
-                    <%--<dd>--%>
-                        <%--<label class="">请在这里输入标题</label>--%>
-                        <%--<span class="char-limit hide _j_char_limit">可输入<strong>48</strong>字</span>--%>
-                        <%--<input id="title" name="title" type="text" maxlength="48" value="" />--%>
-                        <%--<input id="type" name="type" type="hidden" />--%>
-                        <%--<input id="cid" name="cid" type="hidden" />--%>
-                        <%--<input id="rid" name="rid" type="hidden" value="" />--%>
-                        <%--<input id="sfrom" name="sfrom" type="hidden" value="" />--%>
-                        <%--<input type="hidden" name="target" value="iframe" />--%>
-                    <%--</dd>--%>
-                <%--</dl>--%>
+                <dl class="title cf">
+                    <dd>
+                        <label class="">请在这里输入标题</label>
+                        <span class="char-limit hide _j_char_limit">可输入<strong>48</strong>字</span>
+                        <input id="title" name="title" type="text" maxlength="48" value="" style="width:620px;"/>
+                        <input id="type" name="type" type="hidden" />
+                        <input id="cid" name="cid" type="hidden" />
+                        <input id="rid" name="rid" type="hidden" value="" />
+                        <input id="sfrom" name="sfrom" type="hidden" value="" />
+                        <input type="hidden" name="target" value="iframe" />
+                    </dd>
+                </dl>
 
 
-                <div>
+                <dl>
                     <script id="container" name="content" type="text/plain"></script>
-                </div>
+                </dl>
 
 
                 <%--<dl class="body cf">--%>
@@ -289,7 +289,7 @@
                 <%--<span></span>--%>
                 <%--</a>--%>
                 <%--<p><i></i><a href="/activity/propaganda/" target="_blank">游记新模板</a></p>--%>
-                <a class="btn_faq" href="/i/5317220.html" target="_blank">游记常见问题与解答</a>
+                <a class="btn_faq" href="/i/5317220.html" target="_blank" style="margin-left: 80px">游记常见问题与解答</a>
             </div>
             <!--DraftBox-->
             <div class="drafts clearfix hide">
@@ -383,7 +383,7 @@
 
 <link href="http://css.mafengwo.net/css/mfw-footer.css?1493174418" rel="stylesheet" type="text/css"/>
 
-<div id="footer">
+<div id="footer" style="width: 1000px;margin-left: 150px;">
     <div class="ft-content">
         <div class="ft-info clearfix">
             <dl class="ft-info-col ft-info-intro">
@@ -432,14 +432,14 @@
                     <p>蚂蜂窝自由行<br>订阅号</p>
                 </dd>
             </dl>
-            <dl class="ft-info-social">
-                <dt>向崇尚自由的加勒比海盗致敬！</dt>
-                <dd>
-                    <a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>
-                </dd>
-            </dl>
+            <%--<dl class="ft-info-social">--%>
+                <%--<dt>向崇尚自由的加勒比海盗致敬！</dt>--%>
+                <%--<dd>--%>
+                    <%--<a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>--%>
+                    <%--<a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>--%>
+                    <%--<a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
         </div>
 
         <div class="ft-copyright">

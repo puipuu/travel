@@ -5044,7 +5044,7 @@
 
 <link href="http://css.mafengwo.net/css/mfw-footer.css?1493174418" rel="stylesheet" type="text/css" />
 
-<div id="footer">
+<div id="footer" style="width: 1100px;margin-left: 180px">
     <div class="ft-content">
         <div class="ft-info clearfix">
             <dl class="ft-info-col ft-info-intro">

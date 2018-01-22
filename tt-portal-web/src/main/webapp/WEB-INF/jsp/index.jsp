@@ -38,9 +38,9 @@
                     </a>
                     <div class="dropdown-menu dropdown-sales hide _j_sales_top" id="_j_sales_panel" data-cs-t="sales_nav">
                         <ul>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/" data-sales-nav="机票＋酒店">机票＋酒店<i class="i-hot">hot</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/0-0-0-0-0-0-0-0.html?group=4" data-sales-nav="跟团游">跟团游</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/localdeals/" data-sales-nav="当地游">当地游</a></li>
+                            <%--<li><a target="_blank" href="${pageContext.request.contextPath}/hotels" data-sales-nav="酒店">酒店<i class="i-hot">hot</i></a></li>--%>
+                            <li><a target="_blank" href="${pageContext.request.contextPath}/cus-travelgroup" data-sales-nav="跟团游">跟团游</a></li>
+                            <li><a target="_blank" href="${pageContext.request.contextPath}/local-list" data-sales-nav="当地游">当地游</a></li>
                             <%--<li><a target="_blank" href="https://www.mafengwo.cn/flight/" data-sales-nav="国内机票">国内机票<i class="i-new">new</i></a></li>--%>
                             <%--<li><a target="_blank" href="https://www.mafengwo.cn/sales/visa/" data-sales-nav="签证">签证</a></li>--%>
                             <%--<li><a target="_blank" href="http://zuche.mafengwo.cn/?utm_source=i22590029-pc&utm_medium=partner&utm_campaign=entry&utm_term=mfw_nav" data-sales-nav="国际租车">国际租车</a></li>--%>
@@ -48,7 +48,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="head-nav-hotel" data-cs-p="hotel"><a href="http://www.mafengwo.cn/hotel/" title="酒店">酒店</a></li>
+                <li class="head-nav-hotel" data-cs-p="hotel"><a href="${pageContext.request.contextPath}/hotels" title="酒店">酒店</a></li>
                 <li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">论坛</a></li>
 
 
@@ -202,66 +202,66 @@
 
 
 <!-- zhangchu123 -->
-<div class="mfw-focus" id="_j_mfw_focus">
+<div class="mfw-focus" id="_j_mfw_focus" style=" width: 1000px;margin-left: 150px;">
     <div class="show-slider" id="_j_top_pic_container">
         <ul class="show-image">
             <li class="first">
-                <a href="/i/8147250.html" target="_blank" class="show-pic"><img src="https://c2-q.mafengwo.net/s11/M00/04/16/wKgBEFpYDMOAfH_YAA0b5eDLuls18.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/8147250.html" target="_blank" class="show-title dark">
+                <a href="#" target="_blank" class="show-pic"><img src="https://p3-q.mafengwo.net/s11/M00/6E/09/wKgBEFpfFiaAAf4gAAZcUCX6xN029.jpeg?imageMogr2%2Finterlace%2F1" height="430"></a>
+                <a href="#" target="_blank" class="show-title dark">
                     <div class="date">
-                        <span class="day">12</span>/Jan.2018
+                        <span class="day">18</span>/Jan.2018
                     </div>
-                    <h3>重走格瓦拉之路——阿根廷5000公里单人单骑摩托旅行</h3>
+                    <h3>一场粉红色的回忆，垦丁台东高雄十日</h3>
                 </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/10159.html" target="_blank">阿根廷</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/10159.html" target="_blank" rel="nofollow">11705</a></font>张<a href="/travel-scenic-spot/mafengwo/10159.html" target="_blank">阿根廷</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/470218.html" target="_blank">我从来不出去耍</a></font>荣誉出品！</p>
+                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/12684.html" target="_blank">台湾</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/12684.html" target="_blank" rel="nofollow">2658766</a></font>张<a href="/travel-scenic-spot/mafengwo/12684.html" target="_blank">台湾</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/86494331.html" target="_blank">花花花花花小斑</a></font>荣誉出品！</p>
             </li>
             <li>
-                <a href="/i/8167158.html" target="_blank" class="show-pic"><img src="https://n3-q.mafengwo.net/s11/M00/A2/D5/wKgBEFpVwfaARe0kAAme7HnKGow77.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/8167158.html" target="_blank" class="show-title dark">
+                <a href="#" target="_blank" class="show-pic"><img src="https://c2-q.mafengwo.net/s11/M00/A7/60/wKgBEFpd4TSAKVHxAAZJ8n68-HA34.jpeg?imageMogr2%2Finterlace%2F1" height="430"></a>
+                <a href="#" target="_blank" class="show-title dark">
                     <div class="date">
-                        <span class="day">11</span>/Jan.2018
+                        <span class="day">17</span>/Jan.2018
                     </div>
-                    <h3>时间旅店</h3>
+                    <h3>带上娃娃又回中东，这一次我们来重新认识迪拜</h3>
                 </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/154825.html" target="_blank">关西</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/154825.html" target="_blank" rel="nofollow">300381</a></font>张<a href="/travel-scenic-spot/mafengwo/154825.html" target="_blank">关西</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/764822.html" target="_blank">末梢和神经</a></font>荣誉出品！</p>
+                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/11214.html" target="_blank">迪拜</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/11214.html" target="_blank" rel="nofollow">87612</a></font>张<a href="/travel-scenic-spot/mafengwo/11214.html" target="_blank">迪拜</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/10569551.html" target="_blank">贩暖</a></font>荣誉出品！</p>
             </li>
             <li>
-                <a href="/i/8191494.html" target="_blank" class="show-pic"><img src="https://n1-q.mafengwo.net/s11/M00/AC/4D/wKgBEFpUIYqAJag9AAoU9kR3ibQ27.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/8191494.html" target="_blank" class="show-title dark">
+                <a href="#" target="_blank" class="show-pic"><img src="https://b1-q.mafengwo.net/s11/M00/CE/34/wKgBEFpciQiAS7p6AArLVBHmJ_E96.jpeg?imageMogr2%2Finterlace%2F1" height="430"></a>
+                <a href="#" target="_blank" class="show-title dark">
                     <div class="date">
-                        <span class="day">10</span>/Jan.2018
+                        <span class="day">16</span>/Jan.2018
                     </div>
-                    <h3>远方很远，藏行川西，只为许你一个魔幻世界</h3>
+                    <h3>致我在非洲的900个夏日，重新发现闪光日常</h3>
                 </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/11942.html" target="_blank">川西</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/11942.html" target="_blank" rel="nofollow">647715</a></font>张<a href="/travel-scenic-spot/mafengwo/11942.html" target="_blank">川西</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/5695456.html" target="_blank">Sea-Cen</a></font>荣誉出品！</p>
+                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/14517.html" target="_blank">非洲</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/14517.html" target="_blank" rel="nofollow">863327</a></font>张<a href="/travel-scenic-spot/mafengwo/14517.html" target="_blank">非洲</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/13105932.html" target="_blank">Lisa🍗</a></font>荣誉出品！</p>
             </li>
             <li>
-                <a href="/i/8147342.html" target="_blank" class="show-pic"><img src="https://p1-q.mafengwo.net/s11/M00/53/9E/wKgBEFpTPc-AflIDAAnK9qBEdEg35.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/8147342.html" target="_blank" class="show-title dark">
+                <a href="#" target="_blank" class="show-pic"><img src="https://c2-q.mafengwo.net/s11/M00/FB/61/wKgBEFpa_7uAZNl0AAOIkRwvQpU61.jpeg?imageMogr2%2Finterlace%2F1" height="430"></a>
+                <a href="#" target="_blank" class="show-title dark">
                     <div class="date">
-                        <span class="day">9</span>/Jan.2018
+                        <span class="day">15</span>/Jan.2018
                     </div>
-                    <h3>红莲湖上唱歌，向日葵田撒野 ——泰国冬季最美打开方式</h3>
+                    <h3>郴州丨一桩奇地至怪遗梦</h3>
                 </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/124606.html" target="_blank">乌隆他尼</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/124606.html" target="_blank" rel="nofollow">117</a></font>张<a href="/travel-scenic-spot/mafengwo/124606.html" target="_blank">乌隆他尼</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/19014378.html" target="_blank">小玲爱summer</a></font>荣誉出品！</p>
+                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/10792.html" target="_blank">郴州</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/10792.html" target="_blank" rel="nofollow">45856</a></font>张<a href="/travel-scenic-spot/mafengwo/10792.html" target="_blank">郴州</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/93157709.html" target="_blank">feono</a></font>荣誉出品！</p>
             </li>
             <li>
-                <a href="/i/8046774.html" target="_blank" class="show-pic"><img src="https://c1-q.mafengwo.net/s11/M00/13/7D/wKgBEFpQ1p2AYDYXAAdOCj-V_-A88.jpeg?imageMogr2%2Finterlace%2F1"></a>
-                <a href="/i/8046774.html" target="_blank" class="show-title dark">
+                <a href="#" target="_blank" class="show-pic"><img src="https://c1-q.mafengwo.net/s11/M00/3F/13/wKgBEFpZZkOALuuAAAclFgMft3Y80.jpeg?imageMogr2%2Finterlace%2F1" height="430"></a>
+                <a href="#" target="_blank" class="show-title dark">
                     <div class="date">
-                        <span class="day">8</span>/Jan.2018
+                        <span class="day">14</span>/Jan.2018
                     </div>
-                    <h3>新疆行记｜人生何处不相逢</h3>
+                    <h3>给岁月以文明，北印6城8日行摄——附异域风穿搭攻略</h3>
                 </a>
-                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/13061.html" target="_blank">新疆</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/13061.html" target="_blank" rel="nofollow">949109</a></font>张<a href="/travel-scenic-spot/mafengwo/13061.html" target="_blank">新疆</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/5481686.html" target="_blank">枝别</a></font>荣誉出品！</p>
+                <p class="show-info">图片来自于<font color="#FF9900"><a href="/travel-scenic-spot/mafengwo/10182.html" target="_blank">印度</a></font>，此目的地共收藏了<font color="#FF9900"><a href="http://www.mafengwo.cn/photo/mdd/10182.html" target="_blank" rel="nofollow">262902</a></font>张<a href="/travel-scenic-spot/mafengwo/10182.html" target="_blank">印度</a></font>图片。本片由<font color="#FF9900"><a href="http://www.mafengwo.cn/u/32216322.html" target="_blank">YangYangiiiiii</a></font>荣誉出品！</p>
             </li>
         </ul>
         <ul class="show-nav">
-            <li><a href="javascript:"><img src="https://b1-q.mafengwo.net/s11/M00/AC/A2/wKgBEFpXVc6ADOi5AAUNljcs3PQ27.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
-            <li><a href="javascript:"><img src="https://b4-q.mafengwo.net/s11/M00/A2/BF/wKgBEFpVwd-ATY6NAAT9tHvOtP895.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
-            <li><a href="javascript:"><img src="https://p1-q.mafengwo.net/s11/M00/5A/C0/wKgBEFpTSSaAP7alAAOC2-avcC032.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
-            <li><a href="javascript:"><img src="https://p3-q.mafengwo.net/s11/M00/53/97/wKgBEFpTPcaAAhbEAAWMFS4VndE52.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
-            <li><a href="javascript:"><img src="https://c1-q.mafengwo.net/s11/M00/13/74/wKgBEFpQ1paAIEmCAAOcMQJHx9A77.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+            <li><a href="javascript:"><img src="https://p2-q.mafengwo.net/s11/M00/6D/FD/wKgBEFpfFh6AYO8cAANorCG8vw035.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+            <li><a href="javascript:"><img src="https://n4-q.mafengwo.net/s11/M00/A7/5D/wKgBEFpd4SeAd8W9AALVFi4ccKo19.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+            <li><a href="javascript:"><img src="https://p4-q.mafengwo.net/s11/M00/CE/26/wKgBEFpciPuAd3iCAAY0-WwNrz419.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+            <li><a href="javascript:"><img src="https://c3-q.mafengwo.net/s11/M00/FB/52/wKgBEFpa_6iAOLoOAAIz3eBSzAI48.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
+            <li><a href="javascript:"><img src="https://b3-q.mafengwo.net/s11/M00/3F/04/wKgBEFpZZjaAE8htAAPuNDVWHNs27.jpeg?imageMogr2%2Fthumbnail%2F%21108x67r%2Fgravity%2FCenter%2Fcrop%2F%21108x67%2Fquality%2F90" height="62" width="110"><span></span></a></li>
         </ul>
         <a class="show-more" target="_blank" href="/app/calendar.php">历历在目</a>
     </div>
@@ -771,24 +771,24 @@
                 </ul>
             </div>
         </div>
-        <div class="asidebox box-news">
-            <div class="asidebox-hd">
-                <div class="hd-title">蚂蜂窝<h2><a href="javascript:">旅行网站</a></h2>最新进展</div>
-            </div>
-            <ul class="asidebox-bd">
-                <li>11月08日<a href="https://item.taobao.com/item.htm?spm=2013.1.0.0.700c3527TXRAeX&id=560597751456&scm=1007.12144.81309.42296_42296&pvid=e4129662-6eca-4290-b606-26a64ed3e496" target="_blank" rel="nofollow">蚂蜂窝2018蜂首台历开始预售</a></li>
-                <li>11月05日<a href="https://www.mafengwo.cn/weixin/article-2396.html" target="_blank" rel="nofollow">蚂蜂窝赤水音乐季圆满结束</a></li>
-                <li>05月12日<a href="http://www.mafengwo.cn/i/7016306.html" target="_blank" rel="nofollow">指路人俱乐部首期面基大会圆满成功</a></li>
-                <li>10月29日<a href="http://www.mafengwo.cn/i/6282338.html" target="_blank" rel="nofollow">蚂蜂窝2016秋酷大趴全纪录</a></li>
-                <li>09月29日<a href="http://imfw.cn/l/1333160" target="_blank" rel="nofollow">蚂蜂窝秋酷大趴进入倒计时</a></li>
-                <li>09月20日<a href="http://www.mafengwo.cn/i/5605916.html" target="_blank" rel="nofollow">手机写游记功能上线</a></li>
-            </ul>
-        </div>
+        <%--<div class="asidebox box-news">--%>
+            <%--<div class="asidebox-hd">--%>
+                <%--<div class="hd-title">蚂蜂窝<h2><a href="javascript:">旅行网站</a></h2>最新进展</div>--%>
+            <%--</div>--%>
+            <%--<ul class="asidebox-bd">--%>
+                <%--<li>11月08日<a href="https://item.taobao.com/item.htm?spm=2013.1.0.0.700c3527TXRAeX&id=560597751456&scm=1007.12144.81309.42296_42296&pvid=e4129662-6eca-4290-b606-26a64ed3e496" target="_blank" rel="nofollow">蚂蜂窝2018蜂首台历开始预售</a></li>--%>
+                <%--<li>11月05日<a href="https://www.mafengwo.cn/weixin/article-2396.html" target="_blank" rel="nofollow">蚂蜂窝赤水音乐季圆满结束</a></li>--%>
+                <%--<li>05月12日<a href="http://www.mafengwo.cn/i/7016306.html" target="_blank" rel="nofollow">指路人俱乐部首期面基大会圆满成功</a></li>--%>
+                <%--<li>10月29日<a href="http://www.mafengwo.cn/i/6282338.html" target="_blank" rel="nofollow">蚂蜂窝2016秋酷大趴全纪录</a></li>--%>
+                <%--<li>09月29日<a href="http://imfw.cn/l/1333160" target="_blank" rel="nofollow">蚂蜂窝秋酷大趴进入倒计时</a></li>--%>
+                <%--<li>09月20日<a href="http://www.mafengwo.cn/i/5605916.html" target="_blank" rel="nofollow">手机写游记功能上线</a></li>--%>
+            <%--</ul>--%>
+        <%--</div>--%>
     </div>
-    <div class="da-banner da-banner-row"><iframe style="display:block;"  id="advert_25704"
-                                                 name="advert_25704" src="https://topic.mafengwo.cn/ad/d.php?id=25704"
-                                                 class="ads-output-block-w-m"  data-acmtask="25704" data-acmType="cpt"
-                                                 framespacing="0" frameborder="no" scrolling="no" width="1000" height="120"></iframe></div>
+    <%--<div class="da-banner da-banner-row"><iframe style="display:block;"  id="advert_25704"--%>
+                                                 <%--name="advert_25704" src="https://topic.mafengwo.cn/ad/d.php?id=25704"--%>
+                                                 <%--class="ads-output-block-w-m"  data-acmtask="25704" data-acmType="cpt"--%>
+                                                 <%--framespacing="0" frameborder="no" scrolling="no" width="1000" height="120"></iframe></div>--%>
 </div>
 
 
@@ -817,7 +817,7 @@
 
 <link href="http://css.mafengwo.net/css/mfw-footer.css?1493174418" rel="stylesheet" type="text/css"/>
 
-<div id="footer">
+<div id="footer" style="width: 1000px;margin-left: 150px;">
     <div class="ft-content">
         <div class="ft-info clearfix">
             <dl class="ft-info-col ft-info-intro">
@@ -866,19 +866,14 @@
                     <p>蚂蜂窝自由行<br>订阅号</p>
                 </dd>
             </dl>
-            <dl class="ft-info-social">
-                <dt>向崇尚自由的加勒比海盗致敬！</dt>
-                <dd>
-                    <a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>
-                </dd>
-            </dl>
-        </div>
-
-        <div class="ft-links">
-            <a target="_blank" href="http://china.makepolo.com/">马可波罗</a><a target="_blank" href="http://www.onlylady.com/">Onlylady女人志</a><a target="_blank" href="http://trip.elong.com/">艺龙旅游指南</a><a target="_blank" href="http://www.cncn.com">欣欣旅游网</a><a target="_blank" href="http://www.8264.com/">户外运动</a><a target="_blank" href="http://www.yue365.com/">365音乐网</a><a target="_blank" href="http://ishare.iask.sina.com.cn/">爱问共享资料</a><a target="_blank" href="http://www.uzai.com/">旅游网</a><a target="_blank" href="http://www.zongheng.com/">小说网</a><a target="_blank" href="http://www.xuexila.com/">学习啦</a><a target="_blank" href="http://www.yododo.com">游多多自助游</a><a target="_blank" href="http://www.zhcpic.com/">问答</a><a target="_blank" href="http://huoche.mafengwo.cn/">火车时刻表</a><a target="_blank" href="http://www.lvmama.com">驴妈妈旅游网</a><a target="_blank" href="http://www.haodou.com/">好豆美食网</a><a target="_blank" href="http://www.taoche.com/">二手车</a><a target="_blank" href="http://www.lvye.cn">绿野户外</a><a target="_blank" href="http://www.tuniu.com/">途牛旅游网</a><a target="_blank" href="http://www.mapbar.com/">图吧</a><a target="_blank" href="http://www.chnsuv.com">SUV联合越野</a><a target="_blank" href="http://www.uc.cn/">手机浏览器</a><a target="_blank" href="http://sh.city8.com/">上海地图</a><a target="_blank" href="http://www.tianqi.com/">天气预报查询</a><a target="_blank" href="http://www.ly.com/">同程旅游</a><a target="_blank" href="http://www.tieyou.com/">火车票</a><a target="_blank" href="http://www.yunos.com/">YunOS</a><a target="_blank" href="http://you.ctrip.com/">携程旅游</a><a target="_blank" href="http://www.jinjiang.com">锦江旅游</a><a target="_blank" href="http://www.huoche.net/">火车时刻表</a><a target="_blank" href="http://www.tripadvisor.cn/">TripAdvisor</a><a target="_blank" href="http://www.tianxun.com/">天巡网</a><a target="_blank" href="http://www.mayi.com/">短租房</a><a target="_blank" href="http://www.zuzuche.com">租租车</a><a target="_blank" href="http://www.5fen.com/">五分旅游网</a><a target="_blank" href="http://www.zhuna.cn/">酒店预订</a><a target="_blank" href="http://www.ailvxing.com">爱旅行网</a><a target="_blank" href="http://360.mafengwo.cn/all.php">旅游</a><a target="_blank" href="http://vacations.ctrip.com/">旅游网</a><a target="_blank" href="http://www.wed114.cn">wed114结婚网</a><a target="_blank" href="http://www.chexun.com/">车讯网</a><a target="_blank" href="http://www.aoyou.com/">遨游旅游网</a><a target="_blank" href="http://www.91.com/">手机</a>
-            <a href="http://www.mafengwo.cn/s/link.html" target="_blank">更多友情链接&gt;&gt;</a>
+            <%--<dl class="ft-info-social">--%>
+            <%--<dt>向崇尚自由的加勒比海盗致敬！</dt>--%>
+            <%--<dd>--%>
+            <%--<a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>--%>
+            <%--<a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>--%>
+            <%--<a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>--%>
+            <%--</dd>--%>
+            <%--</dl>--%>
         </div>
 
         <div class="ft-copyright">
@@ -896,7 +891,7 @@
 
 
 
-<link href="http://css.mafengwo.net/css/mfw-toolbar.css?1493174418" rel="stylesheet" type="text/css"/>
+<link href="https://css.mafengwo.net/css/mfw-toolbar.css?1493174418" rel="stylesheet" type="text/css"/>
 
 <div class="mfw-toolbar" id="_j_mfwtoolbar">
     <div class="toolbar-item-top">
@@ -929,7 +924,6 @@
         </a>
     </div>
 </div>
-
 
 
 <script language="javascript" type="text/javascript">
