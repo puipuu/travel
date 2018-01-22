@@ -11,7 +11,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>蚂蜂窝当地游,优质一日游、美食、娱乐、生活特惠 - 蚂蜂窝 - 蚂蜂窝自由行</title>
+    <title>0.1版 蚂蜂窝当地游,优质一日游、美食、娱乐、生活特惠 - 蚂蜂窝 - 蚂蜂窝自由行</title>
 
     <meta name="keywords" content="蚂蜂窝当地游,一日游">
     <meta name="description" content="蚂蜂窝当地游,为您推荐优质一日游、美食、娱乐、生活特惠旅游产品,这里汇集了好玩的地方,优质的一日游,特色的小吃,值得一去的景点,个性的玩法,便捷的租车通道等等.">
@@ -31,7 +31,9 @@
     <script language="javascript" src="https://js.mafengwo.net/js/cv/js+common+jquery.plugins:js+common+widgets:js+mfw.storage^ZlI^1493174421.js" type="text/javascript" crossorigin="anonymous"></script>
     <link href="https://css.mafengwo.net/css/cv/css+localdeals+localdeals.v2:css+sales+m-toolbar:css+sales+brand-bar:css+jquery-ui-1.8.18.custom:css+mfweditor+mfweditor^YldT^1493174418.css" rel="stylesheet" type="text/css"/>
     <script language="javascript" src="https://js.mafengwo.net/js/cv/js+jquery.lazyload:js+jquery.mfwSlide:js+jquery-ui-1.8.18.custom.min:js+connect_share:js+yiwofeng+common:js+sales+page_event_statistics^YlZW^1493174421.js" type="text/javascript" crossorigin="anonymous"></script>
-
+    <%--轮播--%>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/layui/css/layui.css" media="all">
+    <script src="${pageContext.request.contextPath}/ layui/layui.js"></script>
 </head>
 <body>
 
@@ -52,169 +54,175 @@
                     </a>
                     <div class="dropdown-menu dropdown-sales hide _j_sales_top" id="_j_sales_panel" data-cs-t="sales_nav">
                         <ul>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/" data-sales-nav="机票＋酒店">机票＋酒店<i class="i-hot">hot</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/0-0-0-0-0-0-0-0.html?group=4" data-sales-nav="跟团游">跟团游</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/localdeals/" data-sales-nav="当地游">当地游</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/flight/" data-sales-nav="国内机票">国内机票<i class="i-new">new</i></a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/sales/visa/" data-sales-nav="签证">签证</a></li>
-                            <li><a target="_blank" href="http://zuche.mafengwo.cn/?utm_source=i22590029-pc&utm_medium=partner&utm_campaign=entry&utm_term=mfw_nav" data-sales-nav="国际租车">国际租车</a></li>
-                            <li><a target="_blank" href="https://www.mafengwo.cn/insure/" data-sales-nav="保险">保险</a></li>
+                            <%--<li><a target="_blank" href="${pageContext.request.contextPath}/hotels" data-sales-nav="酒店">酒店<i class="i-hot">hot</i></a></li>--%>
+                            <li><a target="_blank" href="${pageContext.request.contextPath}/cus-travelgroup" data-sales-nav="跟团游">跟团游</a></li>
+                            <li><a target="_blank" href="javascript:void(0);" data-sales-nav="当地游">当地游</a></li>
+                            <%--<li><a target="_blank" href="https://www.mafengwo.cn/flight/" data-sales-nav="国内机票">国内机票<i class="i-new">new</i></a></li>--%>
+                            <%--<li><a target="_blank" href="https://www.mafengwo.cn/sales/visa/" data-sales-nav="签证">签证</a></li>--%>
+                            <%--<li><a target="_blank" href="http://zuche.mafengwo.cn/?utm_source=i22590029-pc&utm_medium=partner&utm_campaign=entry&utm_term=mfw_nav" data-sales-nav="国际租车">国际租车</a></li>--%>
+                            <%--<li><a target="_blank" href="https://www.mafengwo.cn/insure/" data-sales-nav="保险">保险</a></li>--%>
                         </ul>
                     </div>
                 </li>
-                <li class="head-nav-hotel" data-cs-p="hotel"><a href="http://www.mafengwo.cn/hotel/" title="酒店">酒店</a></li>
-                <li class="head-nav-community head-nav-dropdown _j_shequ_nav_show" id="_j_nav_community" data-cs-p="community">
-                    <div class="drop-toggle"><span>社区<i class="icon-caret-down"></i></span></div>
-                    <!-- 社区下拉面板 begin -->
-                    <div class="dropdown-panel dropdown-community hide _j_shequ_top no-image" id="_j_community_panel" data-cs-t="community_nav">
-                        <div class="panel-wrapper">
-                            <ul class="nav-list clearfix">
-                                <li class="h"><a href="http://www.mafengwo.cn/wenda/" target="_blank" title="问答" data-cs-p="wenda">问答<i class="i-hot">hot</i></a></li>
-                                <li><a href="http://www.mafengwo.cn/mall/things.php" target="_blank" title="蚂蜂窝周边" data-cs-p="things">蚂蜂窝周边<i class="i-new">new</i></a></li>
-                                <li><a href="http://www.mafengwo.cn/club/" target="_blank" title="蜂首俱乐部" data-cs-p="club">蜂首俱乐部</a></li>
-                                <li><a href="http://www.mafengwo.cn/together/" target="_blank" title="结伴" data-cs-p="together">结伴</a></li>
-                            </ul>
-                            <ul class="nav-list-sub clearfix">
+                <li class="head-nav-hotel" data-cs-p="hotel"><a href="${pageContext.request.contextPath}/hotels" title="酒店">酒店</a></li>
+                <li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">论坛</a></li>
 
-                                <li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">小组论坛</a></li>
-                                <li><a href="http://www.mafengwo.cn/rudder/" target="_blank" title="分舵同城" data-cs-p="rudder">分舵同城</a></li>
-                                <li><a href="http://www.mafengwo.cn/auction/" target="_blank" title="蚂蜂窝拍卖行" data-cs-p="paimai">蚂蜂窝拍卖行</a></li>
 
-                                <!--<li><a href="http://www.mafengwo.cn/postal/" target="_blank" title="游记纪念工厂" data-cs-p="postal">游记纪念工厂</a></li>-->
-                                <li><a href="http://www.mafengwo.cn/photo_pk/pk.php" target="_blank" title="照片PK" data-cs-p="photo_pk">照片PK</a></li>
-                                <li><a href="http://www.mafengwo.cn/focus/" target="_blank" title="真人兽" data-cs-p="focus">真人兽</a></li>
-                                <li><a href="http://www.mafengwo.cn/mall/virtual_goods.php" target="_blank" title="道具商店" data-cs-p="virtual">道具商店</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <!-- 社区下拉面板 end -->
-                </li>
-                <li class="head-nav-app" data-cs-p="app"><a href="http://www.mafengwo.cn/app/intro/gonglve.php" title="APP">APP</a></li>
-            </ul>
-            <div class="head-search" data-online="1">
-                <div class="head-search-wrapper">
-                    <div class="head-searchform">
-                        <input name="q" type="text" id="_j_head_search_input" autocomplete="off">
-                        <a role="button" href="javascript:" class="icon-search" id="_j_head_search_link"></a>
-                    </div>
-                </div>
-            </div>
-            <div data-pagelet id="pagelet-block-b7805fd1178c0e534e7ea38d2c56cd59" class="" data-api="apps:user:pagelet:pageViewHeadInfo" data-params="{&quot;type&quot;:1}" data-async="1" data-controller="/js/pageletcommon/pageHeadUserInfoWWWNormal"></div>
+                <%--<li class="head-nav-community head-nav-dropdown _j_shequ_nav_show" id="_j_nav_community" data-cs-p="community">--%>
+                <%--<div class="drop-toggle"><span>社区<i class="icon-caret-down"></i></span></div>--%>
+
+                <%--<!-- 社区下拉面板 begin -->--%>
+                <%--<div class="dropdown-panel dropdown-community hide _j_shequ_top no-image" id="_j_community_panel" data-cs-t="community_nav">--%>
+                <%--&lt;%&ndash;<div class="panel-wrapper">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<ul class="nav-list clearfix">&ndash;%&gt;--%>
+                <%--<ul>--%>
+                <%--<li class="h"><a href="http://www.mafengwo.cn/wenda/" target="_blank" title="问答" data-cs-p="wenda">问答<i class="i-hot">hot</i></a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/mall/things.php" target="_blank" title="蚂蜂窝周边" data-cs-p="things">蚂蜂窝周边<i class="i-new">new</i></a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">小组论坛</a></li>--%>
+                <%--<li><a href="#" target="_blank" title="结伴" data-cs-p="together">结伴</a></li>--%>
+                <%--</ul>--%>
+                <%--<ul class="nav-list-sub clearfix">--%>
+
+                <%--<li><a href="http://www.mafengwo.cn/group/" target="_blank" title="蚂蜂窝旅行家" data-cs-p="group">小组论坛</a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/rudder/" target="_blank" title="分舵同城" data-cs-p="rudder">分舵同城</a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/auction/" target="_blank" title="蚂蜂窝拍卖行" data-cs-p="paimai">蚂蜂窝拍卖行</a></li>--%>
+
+                <%--<!--<li><a href="http://www.mafengwo.cn/postal/" target="_blank" title="游记纪念工厂" data-cs-p="postal">游记纪念工厂</a></li>-->--%>
+                <%--<li><a href="http://www.mafengwo.cn/photo_pk/pk.php" target="_blank" title="照片PK" data-cs-p="photo_pk">照片PK</a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/focus/" target="_blank" title="真人兽" data-cs-p="focus">真人兽</a></li>--%>
+                <%--<li><a href="http://www.mafengwo.cn/mall/virtual_goods.php" target="_blank" title="道具商店" data-cs-p="virtual">道具商店</a></li>--%>
+                <%--</ul>--%>
+                <%--</div>--%>
+                <%--</div>--%>
+
+                <!-- 社区下拉面板 end -->
+                <%--</li>--%>
+                <%--<li class="head-nav-app" data-cs-p="app"><a href="http://www.mafengwo.cn/app/intro/gonglve.php" title="APP">APP</a></li>--%>
+                <%--</ul>--%>
+                <%--<div class="head-search" data-online="1">--%>
+                    <%--<div class="head-search-wrapper">--%>
+                        <%--<div class="head-searchform">--%>
+                            <%--<input name="q" type="text" id="_j_head_search_input" autocomplete="off">--%>
+                            <%--<a role="button" href="javascript:" class="icon-search" id="_j_head_search_link"></a>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <div data-pagelet id="pagelet-block-cf5b942012939406175f473eb838e036" class="" data-api="apps:user:pagelet:pageViewHeadInfo" data-params="{&quot;type&quot;:1}" data-async="1" data-controller="/js/pageletcommon/pageHeadUserInfoWWWNormal"></div>
         </div>
         <div class="shadow"></div>
     </div>
 
     <!-- 新自由行菜单 begin -->
-    <div class="dropdown-bar" style="display: none">
-        <div class="content">
-            <ul class="clearfix ul-dropdown-bar" id="Js_middleNav">
-                <li data-type="sales"><a href="http://www.mafengwo.cn/sales/">机票＋酒店</a></li>
-                <li data-type="freewalker"><a href="http://www.mafengwo.cn/sales/0-0-0-0-0-0-0-0.html?group=4">跟团游</a></li>
-                <li data-type="localdeals"><a href="http://www.mafengwo.cn/localdeals/">当地游</a></li>
-                <li data-type="flight"><a href="http://www.mafengwo.cn/flight/">国内机票</a></li>
-                <li data-type="visa"><a href="http://www.mafengwo.cn/sales/visa/">签证</a></li>
-                <li data-type="wifi"><a href="http://www.mafengwo.cn/localdeals/0-0-0-21-0-0-0-0.html">全球WiFi</a></li>
-                <li data-type="cruise"><a href="http://www.mafengwo.cn/sales/0-0-0-5-0-0-0-0.html">邮轮</a></li>
+    <%--<div class="dropdown-bar" style="display: none">--%>
+    <%--<div class="content">--%>
+    <%--<ul class="clearfix ul-dropdown-bar" id="Js_middleNav">--%>
+    <%--<li data-type="sales"><a href="http://www.mafengwo.cn/sales/">机票＋酒店</a></li>--%>
+    <%--<li data-type="freewalker"><a href="http://www.mafengwo.cn/sales/0-0-0-0-0-0-0-0.html?group=4">跟团游</a></li>--%>
+    <%--<li data-type="localdeals"><a href="http://www.mafengwo.cn/localdeals/">当地游</a></li>--%>
+    <%--<li data-type="flight"><a href="http://www.mafengwo.cn/flight/">国内机票</a></li>--%>
+    <%--<li data-type="visa"><a href="http://www.mafengwo.cn/sales/visa/">签证</a></li>--%>
+    <%--<li data-type="wifi"><a href="http://www.mafengwo.cn/localdeals/0-0-0-21-0-0-0-0.html">全球WiFi</a></li>--%>
+    <%--<li data-type="cruise"><a href="http://www.mafengwo.cn/sales/0-0-0-5-0-0-0-0.html">邮轮</a></li>--%>
 
-                <li data-type="insurance"><a href="http://www.mafengwo.cn/insurance/">旅游保险</a></li>
-            </ul>
-        </div>
+    <%--<li data-type="insurance"><a href="http://www.mafengwo.cn/insurance/">旅游保险</a></li>--%>
+    <%--</ul>--%>
+    <%--</div>--%>
 
-    </div>
-    <!-- 新自由行菜单 end -->
+</div>
+<!-- 新自由行菜单 end -->
 
-    <script>
-        //判断是否显示 下拉bar
-        ;(function () {
-            window.showBarFlag = true;
-            var realPathName = location.pathname,$nav = $('#Js_middleNav');
-            var regExp = /localdeals|sales|flight|insurance|activity/gi;
-            var pathArr = realPathName.match(regExp);
-            if(window.Env.middleNavHide) { $('.dropdown-bar').hide();return;}
-            if(realPathName == '/sales/0-0-0-5-0-0-0-0.html' || window.Env.salesType ==5){
-                $nav.children('[data-type="cruise"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }else if(realPathName == '/localdeals/0-0-0-21-0-0-0-0.html' || window.Env.salesType ==21){
-                $nav.children('[data-type="wifi"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }else if(window.Env.sales_title_tag == 'visa' || window.Env.salesType == 4){
-                $nav.children('[data-type="visa"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }else if(window.Env.sales_title_tag == 'semi_self_service' || realPathName == '/sales/0-0-0-6-0-0-0-0.html?group=4' || window.Env.salesType == 30 || window.Env.salesType == 6){
-                $nav.children('[data-type="freewalker"]').addClass('on');
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
+<script>
+    //判断是否显示 下拉bar
+    ;(function () {
+        window.showBarFlag = true;
+        var realPathName = location.pathname,$nav = $('#Js_middleNav');
+        var regExp = /localdeals|sales|flight|insurance|activity/gi;
+        var pathArr = realPathName.match(regExp);
+        if(window.Env.middleNavHide) { $('.dropdown-bar').hide();return;}
+        if(realPathName == '/sales/0-0-0-5-0-0-0-0.html' || window.Env.salesType ==5){
+            $nav.children('[data-type="cruise"]').addClass('on');
+            window.showBarFlag = false;
+            $('.dropdown-bar').show();
+        }else if(realPathName == '/localdeals/0-0-0-21-0-0-0-0.html' || window.Env.salesType ==21){
+            $nav.children('[data-type="wifi"]').addClass('on');
+            window.showBarFlag = false;
+            $('.dropdown-bar').show();
+        }else if(window.Env.sales_title_tag == 'visa' || window.Env.salesType == 4){
+            $nav.children('[data-type="visa"]').addClass('on');
+            window.showBarFlag = false;
+            $('.dropdown-bar').show();
+        }else if(window.Env.sales_title_tag == 'semi_self_service' || realPathName == '/sales/0-0-0-6-0-0-0-0.html?group=4' || window.Env.salesType == 30 || window.Env.salesType == 6){
+            $nav.children('[data-type="freewalker"]').addClass('on');
+            window.showBarFlag = false;
+            $('.dropdown-bar').show();
+        }
+        else if(window.Env.salesType) {
+            switch(window.Env.salesType|0) {
+                case 1:
+                case 3:
+                    $nav.children('[data-type="sales"]').addClass('on');
+                    break;
+                case 2:
+                    $nav.children('[data-type="localdeals"]').addClass('on');
+                    break;
+                case 30:
+                case 6:
+                    $nav.children('[data-type="freewalker"]').addClass('on');
+                    break;
+                default:
+                    $nav.children('[data-type="localdeals"]').addClass('on');
+                    break;
             }
-            else if(window.Env.salesType) {
-                switch(window.Env.salesType|0) {
-                    case 1:
-                    case 3:
-                        $nav.children('[data-type="sales"]').addClass('on');
-                        break;
-                    case 2:
-                        $nav.children('[data-type="localdeals"]').addClass('on');
-                        break;
-                    case 30:
-                    case 6:
-                        $nav.children('[data-type="freewalker"]').addClass('on');
-                        break;
-                    default:
-                        $nav.children('[data-type="localdeals"]').addClass('on');
-                        break;
-                }
-                window.showBarFlag = false;
-                $('.dropdown-bar').show();
-            }
-            else {
-                if( pathArr){
-                    if(pathArr.length == 1 && pathArr[0] != 'activity'){
-                        switch(pathArr[0]){
-                            case 'localdeals':
-                                $nav.children('[data-type="localdeals"]').addClass('on');
-                                break;
-                            case 'insurance':
-                                $nav.children('[data-type="insurance"]').addClass('on');
-                                break;
-                            case 'sales':
-                                $nav.children('[data-type="sales"]').addClass('on');
-                                break;
-                            case 'flight':
-                                $nav.children('[data-type="flight"]').addClass('on');
-                                break;
-                            default:
-                                break;
-                        }
-                        window.showBarFlag = false;
-                        $('.dropdown-bar').show();
-                    }else {
-                        if('activity'.indexOf(pathArr) != -1){
-                            window.showBarFlag  = true;
-                            $('.dropdown-bar').hide();
-                        }
+            window.showBarFlag = false;
+            $('.dropdown-bar').show();
+        }
+        else {
+            if( pathArr){
+                if(pathArr.length == 1 && pathArr[0] != 'activity'){
+                    switch(pathArr[0]){
+                        case 'localdeals':
+                            $nav.children('[data-type="localdeals"]').addClass('on');
+                            break;
+                        case 'insurance':
+                            $nav.children('[data-type="insurance"]').addClass('on');
+                            break;
+                        case 'sales':
+                            $nav.children('[data-type="sales"]').addClass('on');
+                            break;
+                        case 'flight':
+                            $nav.children('[data-type="flight"]').addClass('on');
+                            break;
+                        default:
+                            break;
+                    }
+                    window.showBarFlag = false;
+                    $('.dropdown-bar').show();
+                }else {
+                    if('activity'.indexOf(pathArr) != -1){
+                        window.showBarFlag  = true;
+                        $('.dropdown-bar').hide();
                     }
                 }
             }
-            // 点击时触发
-            $('.ul-dropdown-bar > li').on('click',function () {
-                $(this).addClass('on').siblings().removeClass('on');
-            });
-        })();
+        }
+        // 点击时触发
+        $('.ul-dropdown-bar > li').on('click',function () {
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+    })();
 
-    </script>
+</script>
 
 </div>
 
 
 <div class="container">
     <!--sousuo start-->
-    <div class="brand-bar clearfix">
+    <div class="brand-bar clearfix" style="margin-top: 25px">
         <div class="bb-hd">
             <div class="bb-title">
-                <a href="http://www.mafengwo.cn/localdeals/" style="text-decoration: none;"><i class="icon-local"></i>当地游</a>
+                <a href="${pageContext.request.contextPath}/local-list" style="text-decoration: none;"><i class="icon-local"></i>当地游</a>
 
             </div>
         </div>
@@ -225,6 +233,7 @@
                         <input data-new-search-depart=1 id="ipt_keyword" class="search-input" type="text" placeholder="请输入目的地 / 产品名称">
                         <a id="btn_keyword"  data-mes-t="按钮" class="search-button" href="javascript:;"><i></i></a>
                     </div>
+
                     <div class="city-panel" style="display: none" data-btn-depart2="1">
                         <h4>国内</h4>
                         <ul>
@@ -373,7 +382,7 @@
     </div>
 
     <!-- end-->
-    <div class="local-top  ui-date clearfix">
+    <div class="local-top  ui-date clearfix" style="margin-top: 15px">
         <div class="top-side" data-entire-nav="1">
             <div class="category">
                 <div class="category-nav">
@@ -1357,78 +1366,32 @@
             </div>
         </div>
 
-        <div class="top-content" data-slide="1">
-            <div class="local-slide" data-slide="1">
-                <ul class="slide-img" style="width:3650px;">
-                    <li><a href="https://www.mafengwo.cn/gonglve/ziyouxing/41377.html"  target="_blank"><img src="https://b1-q.mafengwo.net/s11/M00/59/4E/wKgBEFpTRvGALWdxAAWH6UV97SI08.jpeg" height="336" width="730"></a></li>
-                    <li><a href="http://www.mafengwo.cn/sales/activity/1000433.html"  target="_blank"><img src="https://n4-q.mafengwo.net/s10/M00/96/C6/wKgBZ1lQ4yaABrzAAAIwMtNucSc55.jpeg" height="336" width="730"></a></li>
-                </ul>
-                <ul class="slide-nav">
-
-                    <li class="on"></li>
-                    <li></li>
-
-                </ul>
-                <img id="ad" style="width: 30px;height: 20px;" src="https://file31.mafengwo.net/M00/CB/D6/wKgBs1fs2SyAKJ0hAAAF6t6DzKw318.png" alt="广告小图标">
-
-                <span class="slide-btn btn-left"  data-btn-prev="1"><i></i></span>
-                <span class="slide-btn btn-right"  data-btn-next="1"><i></i></span>
+        <%--//滚动图--%>
+        <div class="top-content" style="height: 410px">
+            <div class="layui-carousel" id="lunbo">
+                <div carousel-item="">
+                    <div><img src="${pageContext.request.contextPath}/images/lunbo1.jpeg"></div>
+                    <div><img src="${pageContext.request.contextPath}/images/lunbo2.jpeg"></div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- 品类导航 -->
-    <div class="slide-row local-navbar">
-        <span class="slide-btn nav-btn-left hide"><i></i></span>
-        <span class="slide-btn nav-btn-right"><i></i></span>
-        <div class="slide-box">
-            <ul class="clearfix nav">
-                <li class="nav-ticket ">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-11-0-0-0-0.html" target="_blank"><i class="icon"></i><div>景点门票</div></a>
-                </li>
-                <li class="nav-around">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-12-0-0-0-0.html" target="_blank"><i class="icon"></i><div>一日游</div></a>
-                </li>
-                <li class="nav-days">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-20-0-0-0-0.html" target="_blank"><i class="icon"></i><div>多日游</div></a>
-                </li>
-                <li class="nav-days">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-29-0-0-0-0.html" target="_blank"><i class="icon"></i><div>当地定制</div></a>
-                </li>
-                <li class="nav-hotel">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-2-0-0-0-0.html" target="_blank"><i class="icon"></i><div>酒店套餐</div></a>
-                </li>
-                <li class="nav-show">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-13-0-0-0-0.html" target="_blank"><i class="icon"></i><div>演出展览</div></a>
-                </li>
-                <li class="nav-experience">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-15-0-0-0-0.html" target="_blank"><i class="icon"></i><div>当地体验</div></a>
-                </li>
-                <li class="nav-food">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-17-0-0-0-0.html" target="_blank"><i class="icon"></i><div>美食</div></a>
-                </li>
-                <li class="nav-shuttle">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-23-0-0-0-0.html" target="_blank"><i class="icon"></i><div>接送机</div></a>
-                </li>
-                <li class="nav-bus">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-25-0-0-0-0.html" target="_blank"><i class="icon"></i><div>包车/拼车</div></a>
-                </li>
-                <li class="nav-transcard">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-26-0-0-0-0.html" target="_blank"><i class="icon"></i><div>交通卡/券</div></a>
-                </li>
-                <li class="nav-bus">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-24-0-0-0-0.html" target="_blank"><i class="icon"></i><div>租车</div></a>
-                </li>
-                <li class="nav-wifi">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-21-0-0-0-0.html" target="_blank"><i class="icon"></i><div>WiFi</div></a>
-                </li>
-                <li class="nav-phonecard">
-                    <a href="http://www.mafengwo.cn/localdeals/0-0-0-22-0-0-0-0.html" target="_blank"><i class="icon"></i><div>电话卡</div></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- 品类导航 end-->
-    <div class="mod-promotion">
+    <script type="text/javascript">
+        layui.use('carousel', function(){
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#lunbo',
+                width: '100%' ,//设置容器宽度
+                height:'405px',
+                arrow: 'always', //始终显示箭头
+                indicator:'inside',
+                //,anim: 'updown' //切换动画方式
+            });
+        });
+    </script>
+
+    <div class="mod-promotion" style="margin-top: 15px">
         <!-- 正在热卖 -->
         <div class="mod-hd">
             <h2>正在热卖</h2>
@@ -2080,383 +2043,383 @@
             </ul>
         </div>
         <!-- 正在热卖 end -->
-    </div>
-    <!-- 自由行攻略 -->
-    <div class="mod-gonglve">
-        <div class="mod-hd">
-            <h2>自由行攻略</h2>
-        </div>
-        <div class="bd slide-row">
-            <span class="slide-btn gl-btn-left hide"><i></i></span>
-            <span class="slide-btn gl-btn-right "><i></i></span>
-            <div class="slide-box">
-                <ul class="list-col3 guides clearfix">
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/55076.html">
-                            <div class="image">
-                                <img data-original="https://c3-q.mafengwo.net/s11/M00/CB/67/wKgBEFpXcm6AaPzWAAbav8v9_xA33.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">日本</div>
-                                <span class="mark-tag">273人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>东京出发！这些2小时能到达的温泉泡汤地，别错过了</h3>
-                                <p>大江户温泉</p>
-                                <p>实用信息</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/55064.html">
-                            <div class="image">
-                                <img data-original="https://b3-q.mafengwo.net/s11/M00/B2/AC/wKgBEFpXWvSADtgDAAKNDhndMoo90.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">美娜多</div>
-                                <span class="mark-tag">27人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>跟随《前任攻略3》，一起探秘神秘海岛——美娜多</h3>
-                                <p>美娜多到底在哪里？怎么去？</p>
-                                <p>美娜多快速了解</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54768.html">
-                            <div class="image">
-                                <img data-original="https://n3-q.mafengwo.net/s11/M00/4F/97/wKgBEFpXBDWAOQWpAAFOqopFqsU74.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">鼓浪屿</div>
-                                <span class="mark-tag">9人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>鼓浪屿拍照攻略！蛰居岛民教你拍出最美旅行照！超文艺</h3>
-                                <p>1.船屋转角</p>
-                                <p>2.船屋船头</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54524.html">
-                            <div class="image">
-                                <img data-original="https://p1-q.mafengwo.net/s11/M00/BB/A4/wKgBEFpV07CAcRwzAACne1ggtaA20.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">厦门</div>
-                            </div>
-                            <div class="detail">
-                                <h3>厦门 | 一份为期3天的小吃攻略</h3>
-                                <p>沙 茶 面</p>
-                                <p>虾 面</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54456.html">
-                            <div class="image">
-                                <img data-original="https://c3-q.mafengwo.net/s11/M00/D3/43/wKgBEFpV9dmASMNtAAMqtacwGBc20.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">贵州</div>
-                                <span class="mark-tag">568人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>初游贵州，不容错过的景点及最佳玩法路线</h3>
-                                <p>第一次到贵州，必须体验的民族风情</p>
-                                <p>西江千户苗寨</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54328.html">
-                            <div class="image">
-                                <img data-original="https://c4-q.mafengwo.net/s11/M00/63/5E/wKgBEFpXE6mAeXUvAARNX8EphLw09.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">杭州</div>
-                                <span class="mark-tag">10人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>杭州那些私藏江南韵味的地方怎么拍，你才好看？</h3>
-                                <p>正确选择旅拍环境</p>
-                                <p>古风环境</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54304.html">
-                            <div class="image">
-                                <img data-original="https://n3-q.mafengwo.net/s11/M00/69/5C/wKgBEFpVjX-AY0DwAAI6iC3DVvQ81.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">曼谷</div>
-                                <span class="mark-tag">13人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>吐血整理！曼谷文艺玩法大总结，这么玩才够范！</h3>
-                                <p>曼谷在哪里</p>
-                                <p>有哪些文艺青年必去的展馆</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/54000.html">
-                            <div class="image">
-                                <img data-original="https://c4-q.mafengwo.net/s11/M00/BD/CC/wKgBEFpV1leAMPzxAB04p5yql7s36.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">马来西亚</div>
-                                <span class="mark-tag">2464人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>第一次去马来玩要花多少钱</h3>
-                                <p>一、马来西亚情况总览</p>
-                                <p>二、签证、国际机票情况</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53832.html">
-                            <div class="image">
-                                <img data-original="https://n3-q.mafengwo.net/s11/M00/54/F6/wKgBEFpTP8aASG-kAAVaRAVdnWo40.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">毛里求斯</div>
-                            </div>
-                            <div class="detail">
-                                <h3>毛里求斯的山海秘境：最新旅行宝典</h3>
-                                <p>引言：徜徉在天堂的原乡</p>
-                                <p>行程：私藏休闲放松之旅</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53816.html">
-                            <div class="image">
-                                <img data-original="https://n4-q.mafengwo.net/s11/M00/56/FD/wKgBEFpTQviAT-qrAAIKAeyFMsA86.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">雪乡</div>
-                            </div>
-                            <div class="detail">
-                                <h3>冬季去东北雪乡旅游，一定要知道的8个问题！</h3>
-                                <p>一、东北冬季旅游常见的八大问题</p>
-                                <p>1、东北白天游玩时间多吗？</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53748.html">
-                            <div class="image">
-                                <img data-original="https://c4-q.mafengwo.net/s11/M00/45/3E/wKgBEFpTLBGAfuExAAYhzB6ejxI16.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">澳门</div>
-                            </div>
-                            <div class="detail">
-                                <h3>想给自己放个假？澳门冬日温情旅行攻略已经为你准备好</h3>
-                                <p>关于澳门的那些情怀回忆</p>
-                                <p>龙环葡韵：感受小清新的澳门</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53656.html">
-                            <div class="image">
-                                <img data-original="https://b2-q.mafengwo.net/s11/M00/2E/42/wKgBEFpTFF-ALqtxAANg0EORi4A58.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">东京</div>
-                            </div>
-                            <div class="detail">
-                                <h3>东京 | 夜生活不是只有居酒屋  还有这些体面的酒</h3>
-                                <p>Bar High Five</p>
-                                <p>New York Bar</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53616.html">
-                            <div class="image">
-                                <img data-original="https://c3-q.mafengwo.net/s11/M00/4F/C5/wKgBEFpTOP2Ad8A4AARQ3MNkV7c51.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">冰岛</div>
-                                <span class="mark-tag">199人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>冰岛南部有哪些小众美景不容错过？</h3>
-                                <p>一、冰岛旅行须知</p>
-                                <p>二、冰岛南部小众美景</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53448.html">
-                            <div class="image">
-                                <img data-original="https://n1-q.mafengwo.net/s11/M00/C1/1E/wKgBEFpSJr2ANAlcAAPa35z6_Ks81.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">哈尔滨</div>
-                                <span class="mark-tag">43人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>哈尔滨最全的美食一日指南！深藏在旮旯胡同的老字号！</h3>
-                                <p>一、老哈尔滨人不得不爱的味道——锅包肉</p>
-                                <p>1.最有历史的锅包肉———老厨家</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53128.html">
-                            <div class="image">
-                                <img data-original="https://c1-q.mafengwo.net/s11/M00/14/86/wKgBEFpPHASAHzMhAAFvbXKqGlM80.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">马尔代夫</div>
-                                <span class="mark-tag">689人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>不想过冬，就飞去热带岛屿游泳！冬季度假海岛盘点~</h3>
-                                <p>冬季选海岛，需要考虑的几大问题</p>
-                                <p>东南亚入门级海岛，轻松畅游没烦恼</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53112.html">
-                            <div class="image">
-                                <img data-original="https://b2-q.mafengwo.net/s11/M00/00/EC/wKgBEFpPAe6AGLrHAAFZ3VOtDQ890.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">苏梅岛</div>
-                                <span class="mark-tag">36人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>2018年合家欢新年第一站，选苏梅就对了</h3>
-                                <p>2018年合家欢新年第一站，为什么选择苏梅岛</p>
-                                <p>交通优势</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/53024.html">
-                            <div class="image">
-                                <img data-original="https://b4-q.mafengwo.net/s11/M00/BF/F8/wKgBEFpQZBKAJGuYABoqgRgCN0E22.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">腾冲</div>
-                                <span class="mark-tag">138人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>腾冲四季最全看点，在极边之城感受慢生活</h3>
-                                <p>一、冬季——不知冷的极边小城</p>
-                                <p>①泡不完的温泉</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/52776.html">
-                            <div class="image">
-                                <img data-original="https://b2-q.mafengwo.net/s11/M00/F6/BB/wKgBEFpUfyGAQNlBAAQSzdiGSqw44.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">曼谷</div>
-                                <span class="mark-tag">520人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>曼谷廊曼机场与曼谷市区、芭提雅、华欣的交通方式</h3>
-                                <p>当曼谷遇上机场之廊曼</p>
-                                <p>曼谷与机场</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/52708.html">
-                            <div class="image">
-                                <img data-original="https://b3-q.mafengwo.net/s11/M00/6D/AE/wKgBEFpN6NaAWONUABZt2D7MQsk59.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">丽江</div>
-                                <span class="mark-tag">3772人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>一篇攻略带你玩转丽江古城及滇西北丨附1-2日游线路</h3>
-                                <p>一、丽江概况</p>
-                                <p>1.气候</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-item">
-                        <a href="/gonglve/ziyouxing/52636.html">
-                            <div class="image">
-                                <img data-original="https://p1-q.mafengwo.net/s11/M00/E4/EB/wKgBEFpO2z2ACWxyAAHi7JVBQbU31.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">
-                                <div class="place">雪乡</div>
-                                <span class="mark-tag">1427人体验过</span>                                </div>
-                            <div class="detail">
-                                <h3>雪乡防坑，解答最关心的吃住玩行四大问题~</h3>
-                                <p>关于住：如何能选择到不坑人的民宿？</p>
-                                <p>Q1 雪乡住宿都有哪几种选择？房价如何？</p>
-                                <div class="view">查看详情<i></i></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--自由行攻略 end -->
-    <div class="mod-recommend">
-        <!-- 完美假期 -->
-        <div class="mod-hd">
-            <h2>度过完美假期</h2>
-            <div class="select"></div>
-        </div>
-        <div class="mod-bd">
-            <ul class="list-col3 clearfix" id="index_mdd_sales"></ul>
-        </div>
-    </div>
-    <div class="mod-ensure">
-        <div class="mod-hd">
-            <h2>心若自由  行必无忧</h2>
-        </div>
-        <div class="mod-bd">
-            <ul class="list-col3 clearfix">
-                <li class="col-item">
-                    <span class="icon icon1"></span>
-                    <h3>快速响应</h3>
-                    <p>您旅行中的每一个疑问，都可以随时联系我们~</p>
-                </li>
-                <li class="col-item">
-                    <span class="icon icon2"></span>
-                    <h3>全时中文</h3>
-                    <p>境外旅行无需担心语言障碍，我们为您提供24H中文咨询服务</p>
-                </li>
-                <li class="col-item">
-                    <span class="icon icon3"></span>
-                    <h3>免费退改</h3>
-                    <p>旅行计划临时调整，请联系客服退改，详情请参照产品退改政策</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="ft-gallery">
-    <ul class="gallery-list clearfix">
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img1.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img2.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img3.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img4.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img5.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img6.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img7.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img8.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img9.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img10.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img11.jpg"></li>
-        <li><img src="https://images.mafengwo.net/images/localdeals/ga-img12.jpg"></li>
-    </ul>
-    <div class="gallery-text"><span>你可以，</span>到世界的角落去转转...</div>
-</div>
-<div class="sales-toolbar">
-    <div class="stbar-middle">
-        <div class="stbar-nav">
-            <div class="stbar-item stbar-order">
-                <a href="/sales/order.php" target="_blank">
-                    <i class="stbar-icon"></i><span class="stbar-text">我的订单</span>
-                </a>
-            </div>
-            <div class="stbar-item stbar-coupon">
-                <a href="/sales/coupon.php" target="_blank">
-                    <i class="stbar-icon"></i><span class="stbar-text">我的优惠券</span>
-                </a>
-            </div>
-            <div class="stbar-item stbar-collect">
-                <a href="/sales/collect.php" target="_blank">
-                    <i class="stbar-icon"></i><span class="stbar-text">我的收藏</span>
-                </a>
-            </div>
-        </div>
-        <div class="stbar-nav">
-            <div class="stbar-item stbar-weibo">
-                <a href="http://e.weibo.com/u/3120321513" target="_blank"><i class="stbar-icon"></i><span class="stbar-pop"><span class="btn-follow">+ 关注</span><br><span>蚂蜂窝良品</span></span></a>
-            </div>
-            <div class="stbar-item stbar-weixin">
-                <i class="stbar-icon"></i><span class="stbar-qrcode"><img src="https://images.mafengwo.net/images/sales/list_wx_qr_code.jpg" height="104" width="104"></span>
-            </div>
-        </div>
-    </div>
-</div>
+    <%--</div>--%>
+    <%--<!-- 自由行攻略 -->--%>
+    <%--<div class="mod-gonglve">--%>
+        <%--<div class="mod-hd">--%>
+            <%--<h2>自由行攻略</h2>--%>
+        <%--</div>--%>
+        <%--<div class="bd slide-row">--%>
+            <%--<span class="slide-btn gl-btn-left hide"><i></i></span>--%>
+            <%--<span class="slide-btn gl-btn-right "><i></i></span>--%>
+            <%--<div class="slide-box">--%>
+                <%--<ul class="list-col3 guides clearfix">--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/55076.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c3-q.mafengwo.net/s11/M00/CB/67/wKgBEFpXcm6AaPzWAAbav8v9_xA33.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">日本</div>--%>
+                                <%--<span class="mark-tag">273人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>东京出发！这些2小时能到达的温泉泡汤地，别错过了</h3>--%>
+                                <%--<p>大江户温泉</p>--%>
+                                <%--<p>实用信息</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/55064.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b3-q.mafengwo.net/s11/M00/B2/AC/wKgBEFpXWvSADtgDAAKNDhndMoo90.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">美娜多</div>--%>
+                                <%--<span class="mark-tag">27人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>跟随《前任攻略3》，一起探秘神秘海岛——美娜多</h3>--%>
+                                <%--<p>美娜多到底在哪里？怎么去？</p>--%>
+                                <%--<p>美娜多快速了解</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54768.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://n3-q.mafengwo.net/s11/M00/4F/97/wKgBEFpXBDWAOQWpAAFOqopFqsU74.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">鼓浪屿</div>--%>
+                                <%--<span class="mark-tag">9人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>鼓浪屿拍照攻略！蛰居岛民教你拍出最美旅行照！超文艺</h3>--%>
+                                <%--<p>1.船屋转角</p>--%>
+                                <%--<p>2.船屋船头</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54524.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://p1-q.mafengwo.net/s11/M00/BB/A4/wKgBEFpV07CAcRwzAACne1ggtaA20.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">厦门</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>厦门 | 一份为期3天的小吃攻略</h3>--%>
+                                <%--<p>沙 茶 面</p>--%>
+                                <%--<p>虾 面</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54456.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c3-q.mafengwo.net/s11/M00/D3/43/wKgBEFpV9dmASMNtAAMqtacwGBc20.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">贵州</div>--%>
+                                <%--<span class="mark-tag">568人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>初游贵州，不容错过的景点及最佳玩法路线</h3>--%>
+                                <%--<p>第一次到贵州，必须体验的民族风情</p>--%>
+                                <%--<p>西江千户苗寨</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54328.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c4-q.mafengwo.net/s11/M00/63/5E/wKgBEFpXE6mAeXUvAARNX8EphLw09.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">杭州</div>--%>
+                                <%--<span class="mark-tag">10人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>杭州那些私藏江南韵味的地方怎么拍，你才好看？</h3>--%>
+                                <%--<p>正确选择旅拍环境</p>--%>
+                                <%--<p>古风环境</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54304.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://n3-q.mafengwo.net/s11/M00/69/5C/wKgBEFpVjX-AY0DwAAI6iC3DVvQ81.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">曼谷</div>--%>
+                                <%--<span class="mark-tag">13人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>吐血整理！曼谷文艺玩法大总结，这么玩才够范！</h3>--%>
+                                <%--<p>曼谷在哪里</p>--%>
+                                <%--<p>有哪些文艺青年必去的展馆</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/54000.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c4-q.mafengwo.net/s11/M00/BD/CC/wKgBEFpV1leAMPzxAB04p5yql7s36.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">马来西亚</div>--%>
+                                <%--<span class="mark-tag">2464人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>第一次去马来玩要花多少钱</h3>--%>
+                                <%--<p>一、马来西亚情况总览</p>--%>
+                                <%--<p>二、签证、国际机票情况</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53832.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://n3-q.mafengwo.net/s11/M00/54/F6/wKgBEFpTP8aASG-kAAVaRAVdnWo40.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">毛里求斯</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>毛里求斯的山海秘境：最新旅行宝典</h3>--%>
+                                <%--<p>引言：徜徉在天堂的原乡</p>--%>
+                                <%--<p>行程：私藏休闲放松之旅</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53816.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://n4-q.mafengwo.net/s11/M00/56/FD/wKgBEFpTQviAT-qrAAIKAeyFMsA86.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">雪乡</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>冬季去东北雪乡旅游，一定要知道的8个问题！</h3>--%>
+                                <%--<p>一、东北冬季旅游常见的八大问题</p>--%>
+                                <%--<p>1、东北白天游玩时间多吗？</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53748.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c4-q.mafengwo.net/s11/M00/45/3E/wKgBEFpTLBGAfuExAAYhzB6ejxI16.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">澳门</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>想给自己放个假？澳门冬日温情旅行攻略已经为你准备好</h3>--%>
+                                <%--<p>关于澳门的那些情怀回忆</p>--%>
+                                <%--<p>龙环葡韵：感受小清新的澳门</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53656.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b2-q.mafengwo.net/s11/M00/2E/42/wKgBEFpTFF-ALqtxAANg0EORi4A58.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">东京</div>--%>
+                            <%--</div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>东京 | 夜生活不是只有居酒屋  还有这些体面的酒</h3>--%>
+                                <%--<p>Bar High Five</p>--%>
+                                <%--<p>New York Bar</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53616.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c3-q.mafengwo.net/s11/M00/4F/C5/wKgBEFpTOP2Ad8A4AARQ3MNkV7c51.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">冰岛</div>--%>
+                                <%--<span class="mark-tag">199人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>冰岛南部有哪些小众美景不容错过？</h3>--%>
+                                <%--<p>一、冰岛旅行须知</p>--%>
+                                <%--<p>二、冰岛南部小众美景</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53448.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://n1-q.mafengwo.net/s11/M00/C1/1E/wKgBEFpSJr2ANAlcAAPa35z6_Ks81.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">哈尔滨</div>--%>
+                                <%--<span class="mark-tag">43人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>哈尔滨最全的美食一日指南！深藏在旮旯胡同的老字号！</h3>--%>
+                                <%--<p>一、老哈尔滨人不得不爱的味道——锅包肉</p>--%>
+                                <%--<p>1.最有历史的锅包肉———老厨家</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53128.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://c1-q.mafengwo.net/s11/M00/14/86/wKgBEFpPHASAHzMhAAFvbXKqGlM80.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">马尔代夫</div>--%>
+                                <%--<span class="mark-tag">689人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>不想过冬，就飞去热带岛屿游泳！冬季度假海岛盘点~</h3>--%>
+                                <%--<p>冬季选海岛，需要考虑的几大问题</p>--%>
+                                <%--<p>东南亚入门级海岛，轻松畅游没烦恼</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53112.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b2-q.mafengwo.net/s11/M00/00/EC/wKgBEFpPAe6AGLrHAAFZ3VOtDQ890.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">苏梅岛</div>--%>
+                                <%--<span class="mark-tag">36人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>2018年合家欢新年第一站，选苏梅就对了</h3>--%>
+                                <%--<p>2018年合家欢新年第一站，为什么选择苏梅岛</p>--%>
+                                <%--<p>交通优势</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/53024.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b4-q.mafengwo.net/s11/M00/BF/F8/wKgBEFpQZBKAJGuYABoqgRgCN0E22.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">腾冲</div>--%>
+                                <%--<span class="mark-tag">138人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>腾冲四季最全看点，在极边之城感受慢生活</h3>--%>
+                                <%--<p>一、冬季——不知冷的极边小城</p>--%>
+                                <%--<p>①泡不完的温泉</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/52776.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b2-q.mafengwo.net/s11/M00/F6/BB/wKgBEFpUfyGAQNlBAAQSzdiGSqw44.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">曼谷</div>--%>
+                                <%--<span class="mark-tag">520人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>曼谷廊曼机场与曼谷市区、芭提雅、华欣的交通方式</h3>--%>
+                                <%--<p>当曼谷遇上机场之廊曼</p>--%>
+                                <%--<p>曼谷与机场</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/52708.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://b3-q.mafengwo.net/s11/M00/6D/AE/wKgBEFpN6NaAWONUABZt2D7MQsk59.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">丽江</div>--%>
+                                <%--<span class="mark-tag">3772人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>一篇攻略带你玩转丽江古城及滇西北丨附1-2日游线路</h3>--%>
+                                <%--<p>一、丽江概况</p>--%>
+                                <%--<p>1.气候</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li class="col-item">--%>
+                        <%--<a href="/gonglve/ziyouxing/52636.html">--%>
+                            <%--<div class="image">--%>
+                                <%--<img data-original="https://p1-q.mafengwo.net/s11/M00/E4/EB/wKgBEFpO2z2ACWxyAAHi7JVBQbU31.jpeg?imageMogr2%2Fthumbnail%2F%21670x380r%2Fgravity%2FCenter%2Fcrop%2F%21670x380%2Fquality%2F100" height="179" width="318">--%>
+                                <%--<div class="place">雪乡</div>--%>
+                                <%--<span class="mark-tag">1427人体验过</span>                                </div>--%>
+                            <%--<div class="detail">--%>
+                                <%--<h3>雪乡防坑，解答最关心的吃住玩行四大问题~</h3>--%>
+                                <%--<p>关于住：如何能选择到不坑人的民宿？</p>--%>
+                                <%--<p>Q1 雪乡住宿都有哪几种选择？房价如何？</p>--%>
+                                <%--<div class="view">查看详情<i></i></div>--%>
+                            <%--</div>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                <%--</ul>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+    <%--<!--自由行攻略 end -->--%>
+    <%--<div class="mod-recommend">--%>
+        <%--<!-- 完美假期 -->--%>
+        <%--<div class="mod-hd">--%>
+            <%--<h2>度过完美假期</h2>--%>
+            <%--<div class="select"></div>--%>
+        <%--</div>--%>
+        <%--<div class="mod-bd">--%>
+            <%--<ul class="list-col3 clearfix" id="index_mdd_sales"></ul>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+    <%--<div class="mod-ensure">--%>
+        <%--<div class="mod-hd">--%>
+            <%--<h2>心若自由  行必无忧</h2>--%>
+        <%--</div>--%>
+        <%--<div class="mod-bd">--%>
+            <%--<ul class="list-col3 clearfix">--%>
+                <%--<li class="col-item">--%>
+                    <%--<span class="icon icon1"></span>--%>
+                    <%--<h3>快速响应</h3>--%>
+                    <%--<p>您旅行中的每一个疑问，都可以随时联系我们~</p>--%>
+                <%--</li>--%>
+                <%--<li class="col-item">--%>
+                    <%--<span class="icon icon2"></span>--%>
+                    <%--<h3>全时中文</h3>--%>
+                    <%--<p>境外旅行无需担心语言障碍，我们为您提供24H中文咨询服务</p>--%>
+                <%--</li>--%>
+                <%--<li class="col-item">--%>
+                    <%--<span class="icon icon3"></span>--%>
+                    <%--<h3>免费退改</h3>--%>
+                    <%--<p>旅行计划临时调整，请联系客服退改，详情请参照产品退改政策</p>--%>
+                <%--</li>--%>
+            <%--</ul>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
+<%--<div class="ft-gallery">--%>
+    <%--<ul class="gallery-list clearfix">--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img1.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img2.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img3.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img4.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img5.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img6.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img7.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img8.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img9.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img10.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img11.jpg"></li>--%>
+        <%--<li><img src="https://images.mafengwo.net/images/localdeals/ga-img12.jpg"></li>--%>
+    <%--</ul>--%>
+    <%--<div class="gallery-text"><span>你可以，</span>到世界的角落去转转...</div>--%>
+<%--</div>--%>
+<%--<div class="sales-toolbar">--%>
+    <%--<div class="stbar-middle">--%>
+        <%--<div class="stbar-nav">--%>
+            <%--<div class="stbar-item stbar-order">--%>
+                <%--<a href="/sales/order.php" target="_blank">--%>
+                    <%--<i class="stbar-icon"></i><span class="stbar-text">我的订单</span>--%>
+                <%--</a>--%>
+            <%--</div>--%>
+            <%--<div class="stbar-item stbar-coupon">--%>
+                <%--<a href="/sales/coupon.php" target="_blank">--%>
+                    <%--<i class="stbar-icon"></i><span class="stbar-text">我的优惠券</span>--%>
+                <%--</a>--%>
+            <%--</div>--%>
+            <%--<div class="stbar-item stbar-collect">--%>
+                <%--<a href="/sales/collect.php" target="_blank">--%>
+                    <%--<i class="stbar-icon"></i><span class="stbar-text">我的收藏</span>--%>
+                <%--</a>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="stbar-nav">--%>
+            <%--<div class="stbar-item stbar-weibo">--%>
+                <%--<a href="http://e.weibo.com/u/3120321513" target="_blank"><i class="stbar-icon"></i><span class="stbar-pop"><span class="btn-follow">+ 关注</span><br><span>蚂蜂窝良品</span></span></a>--%>
+            <%--</div>--%>
+            <%--<div class="stbar-item stbar-weixin">--%>
+                <%--<i class="stbar-icon"></i><span class="stbar-qrcode"><img src="https://images.mafengwo.net/images/sales/list_wx_qr_code.jpg" height="104" width="104"></span>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
 
 
 
@@ -2573,58 +2536,7 @@
                     }
                 });
             },
-//            轮播图
-            lunBoTu: function () {
-                var panelSwitchTimeout = 0, panelSwitchDelay = 100, panelHideDelay = 250, panelHideTimeout = 0;
-
-                $("[data-panel=1]").on("mouseenter", function(){
-                    window.clearTimeout(panelSwitchTimeout);
-                });
-
-                $("[data-type=left-nav]").on("mouseenter", function() {
-
-                    var nav = $(this), navTarget = nav.data("navTarget"), panel = $('[data-panel="1"]');
-                    window.clearTimeout(panelSwitchTimeout);
-                    panelSwitchTimeout = window.setTimeout(function() {
-                        nav.addClass('hover').siblings("[data-type=left-nav]").removeClass("hover");
-                        panel.show().find('[data-panel-target]').hide().end()
-                            .find('[data-panel-target="'+navTarget+'"]').show();
-                    }, panelSwitchDelay);
-                });
-
-                $("[data-entire-nav]").hover(function() {
-                    window.clearTimeout(panelHideTimeout);
-                }, function() {
-                    window.clearTimeout(panelSwitchTimeout);
-                    panelHideTimeout = window.setTimeout(function(){
-                        $("[data-type=left-nav]").removeClass("hover");
-                        $("[data-panel=1]").hide();
-                    }, panelHideDelay);
-
-                });
-                $('[data-tab-wrapper]').find('[data-i]').on('mouseenter', function() {
-                    var self = $(this), index = self.data('i'), wrapper = self.closest('[data-tab-wrapper]'),
-                        indexB = wrapper.data('indexb')||"";
-                    wrapper.find('[data-i]').removeClass('on'+indexB).eq(index).addClass('on'+indexB).end().end()
-                        .find('[data-p]').hide().eq(index).show();
-                });
-                $('[data-slide=1]').mfwSlide({
-                    'width' : 730,
-                    'height': 460,
-                    'speed' : 500,  //滚动速度
-                    'item' : '.slide-img>li',
-                    'thumb_box' : '.slide-nav',  //缩略图，没有请置空
-                    'thumb_item' : 'li', //缩略图单个元素
-                    'prev_btn' : '[data-btn-prev]',   //前一张，没有请置空
-                    'next_btn' : '[data-btn-next]',   //下一张，没有请置空
-                    'thumb_focus_class' : 'on',  // 当前正在显示的幻灯对应的缩略图的class
-                    'auto_play' : true,  // 自动播放
-                    'interval' : 5,  // 幻灯切换时间间隔
-                    'btn_auto_hide' : true,  // 自动隐藏上一张，下一张按钮
-                    'contain' : true, //thumb_box是否是$('#slide_box')的子元素,除特殊情况应该为true
-                    'always_play' : true // 点击后依旧可以播放
-                });
-            }
+//
         };
         localdealsIndex.init();
         //search js
@@ -2695,123 +2607,123 @@
 </script>
 
 
-<link href="https://css.mafengwo.net/css/mfw-footer.css?1493174418" rel="stylesheet" type="text/css"/>
+<%--<link href="https://css.mafengwo.net/css/mfw-footer.css?1493174418" rel="stylesheet" type="text/css"/>--%>
 
-<div id="footer">
-    <div class="ft-content">
-        <div class="ft-info clearfix">
-            <dl class="ft-info-col ft-info-intro">
-                <dt>中国领先的自由行服务平台</dt>
-                <dd>覆盖全球200多个国家和地区</dd>
-                <dd><strong>100,000,000</strong> 位旅行者</dd>
-                <dd><strong>920,000</strong> 家国际酒店</dd>
-                <dd><strong>21,000,000</strong> 条真实点评</dd>
-                <dd><strong>382,000,000</strong> 次攻略下载</dd>
-                <dd><a class="highlight" href="http://www.mafengwo.cn/activity/sales_report2015/index" target="_blank">中国旅游行业第一部“玩法”</a></dd>
-            </dl>
-            <dl class="ft-info-col ft-info-about">
-                <dt>关于我们</dt>
-                <dd><a href="http://www.mafengwo.cn/s/about.html" rel="nofollow">关于蚂蜂窝</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/property.html" rel="nofollow">网络信息侵权通知指引</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/private.html" rel="nofollow">隐私政策</a><a href="http://www.mafengwo.cn/s/agreement.html" rel="nofollow" class="m_l_10">服务协议</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/contact.html" rel="nofollow">联系我们</a></dd>
-                <dd><a href="http://www.mafengwo.cn/s/sitemap.html" target="_blank">网站地图</a></dd>
-                <dd><a class="joinus highlight" title="蚂蜂窝团队招聘" target="_blank" href="http://www.mafengwo.cn/s/hr.html" rel="nofollow">加入蚂蜂窝</a></dd>
-            </dl>
-            <dl class="ft-info-col ft-info-service">
-                <dt>旅行服务</dt>
-                <dd>
-                    <ul class="clearfix">
-                        <li><a target="_blank" href="http://www.mafengwo.cn/gonglve/">旅游攻略</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/hotel/">酒店预订</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/sales/">旅游特价</a></li>
-                        <li><a target="_blank" href="http://zuche.mafengwo.cn/">国际租车</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/wenda/">旅游问答</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/insure/">旅游保险</a></li>
-                        <li><a target="_blank" href="http://z.mafengwo.cn">旅游指南</a></li>
-                        <li><a target="_blank" href="http://huoche.mafengwo.cn">订火车票</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/travel-news/">旅游资讯</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/app/intro/gonglve.php">APP下载</a></li>
-                        <li><a target="_blank" href="http://www.mafengwo.cn/sales/alliance.php" class="highlight">全球供应商入驻</a></li>
-                    </ul>
-                </dd>
-            </dl>
-            <dl class="ft-info-col ft-info-qrcode">
-                <dd>
-                    <span class="ft-qrcode-tejia"></span>
-                    <p>蚂蜂窝良品<br>官方服务号</p>
-                </dd>
-                <dd>
-                    <span class="ft-qrcode-weixin"></span>
-                    <p>蚂蜂窝自由行<br>订阅号</p>
-                </dd>
-            </dl>
-            <dl class="ft-info-social">
-                <dt>向崇尚自由的加勒比海盗致敬！</dt>
-                <dd>
-                    <a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>
-                    <a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>
-                </dd>
-            </dl>
-        </div>
+<%--<div id="footer" style="width: 1000px;margin-left: 150px;">--%>
+    <%--<div class="ft-content">--%>
+        <%--<div class="ft-info clearfix">--%>
+            <%--<dl class="ft-info-col ft-info-intro">--%>
+                <%--<dt>中国领先的自由行服务平台</dt>--%>
+                <%--<dd>覆盖全球200多个国家和地区</dd>--%>
+                <%--<dd><strong>100,000,000</strong> 位旅行者</dd>--%>
+                <%--<dd><strong>920,000</strong> 家国际酒店</dd>--%>
+                <%--<dd><strong>21,000,000</strong> 条真实点评</dd>--%>
+                <%--<dd><strong>382,000,000</strong> 次攻略下载</dd>--%>
+                <%--<dd><a class="highlight" href="http://www.mafengwo.cn/activity/sales_report2015/index" target="_blank">中国旅游行业第一部“玩法”</a></dd>--%>
+            <%--</dl>--%>
+            <%--<dl class="ft-info-col ft-info-about">--%>
+                <%--<dt>关于我们</dt>--%>
+                <%--<dd><a href="http://www.mafengwo.cn/s/about.html" rel="nofollow">关于蚂蜂窝</a></dd>--%>
+                <%--<dd><a href="http://www.mafengwo.cn/s/property.html" rel="nofollow">网络信息侵权通知指引</a></dd>--%>
+                <%--<dd><a href="http://www.mafengwo.cn/s/private.html" rel="nofollow">隐私政策</a><a href="http://www.mafengwo.cn/s/agreement.html" rel="nofollow" class="m_l_10">服务协议</a></dd>--%>
+                <%--<dd><a href="http://www.mafengwo.cn/s/contact.html" rel="nofollow">联系我们</a></dd>--%>
+                <%--<dd><a href="http://www.mafengwo.cn/s/sitemap.html" target="_blank">网站地图</a></dd>--%>
+                <%--<dd><a class="joinus highlight" title="蚂蜂窝团队招聘" target="_blank" href="http://www.mafengwo.cn/s/hr.html" rel="nofollow">加入蚂蜂窝</a></dd>--%>
+            <%--</dl>--%>
+            <%--<dl class="ft-info-col ft-info-service">--%>
+                <%--<dt>旅行服务</dt>--%>
+                <%--<dd>--%>
+                    <%--<ul class="clearfix">--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/gonglve/">旅游攻略</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/hotel/">酒店预订</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/sales/">旅游特价</a></li>--%>
+                        <%--<li><a target="_blank" href="http://zuche.mafengwo.cn/">国际租车</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/wenda/">旅游问答</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/insure/">旅游保险</a></li>--%>
+                        <%--<li><a target="_blank" href="http://z.mafengwo.cn">旅游指南</a></li>--%>
+                        <%--<li><a target="_blank" href="http://huoche.mafengwo.cn">订火车票</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/travel-news/">旅游资讯</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/app/intro/gonglve.php">APP下载</a></li>--%>
+                        <%--<li><a target="_blank" href="http://www.mafengwo.cn/sales/alliance.php" class="highlight">全球供应商入驻</a></li>--%>
+                    <%--</ul>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--<dl class="ft-info-col ft-info-qrcode">--%>
+                <%--<dd>--%>
+                    <%--<span class="ft-qrcode-tejia"></span>--%>
+                    <%--<p>蚂蜂窝良品<br>官方服务号</p>--%>
+                <%--</dd>--%>
+                <%--<dd>--%>
+                    <%--<span class="ft-qrcode-weixin"></span>--%>
+                    <%--<p>蚂蜂窝自由行<br>订阅号</p>--%>
+                <%--</dd>--%>
+            <%--</dl>--%>
+            <%--&lt;%&ndash;<dl class="ft-info-social">&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<dt>向崇尚自由的加勒比海盗致敬！</dt>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;<dd>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;<a class="ft-social-weibo" target="_blank" href="http://weibo.com/mafengwovip" rel="nofollow"><i class="ft-social-icon"></i></a>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;<a class="ft-social-qqt" target="_blank" href="http://t.qq.com/mafengwovip" rel="nofollow" ><i class="ft-social-icon"></i></a>&ndash;%&gt;--%>
+                    <%--&lt;%&ndash;<a class="ft-social-qzone" target="_blank" href="http://1213600479.qzone.qq.com/" rel="nofollow"><i class="ft-social-icon"></i></a>&ndash;%&gt;--%>
+                <%--&lt;%&ndash;</dd>&ndash;%&gt;--%>
+            <%--&lt;%&ndash;</dl>&ndash;%&gt;--%>
+        <%--</div>--%>
 
-        <div class="ft-copyright">
-            <div class="ft-safety">
-                <a class="s-a" target="_blank" href="https://search.szfw.org/cert/l/CX20140627008255008321" id="___szfw_logo___"></a>
-                <a class="s-b" href="https://ss.knet.cn/verifyseal.dll?sn=e130816110100420286o93000000&ct=df&a=1&pa=787189" target="_blank" rel="nofollow"></a>
-                <a class="s-c" href="http://www.itrust.org.cn/Home/Index/itrust_certifi/wm/1669928206.html" target="_blank" rel="nofollow"></a>
-            </div>
-            <a href="http://www.mafengwo.cn"><i class="ft-mfw-logo"></i></a>
-            <p>© 2018 Mafengwo.cn <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP备11015476号</a> 京公网安备110105013401号 <a href="http://images.mafengwo.net/images/about/icp.jpg" target="_blank" rel="nofollow">京ICP证110318号</a></p>
-            <p><a href="http://images.mafengwo.net/images/about/licence.jpg" target="_blank" rel="nofollow">营业执照</a> 新出网证(京)字242号 蚂蜂窝客服：国内 <span class="highlight">4006-345-678</span><span class="m_l_10">海外</span> <span class="highlight">+86-10-5922-2799</span></p>
-        </div>
-    </div>
-</div>
-
-
-
-<link href="https://css.mafengwo.net/css/mfw-toolbar.css?1493174418" rel="stylesheet" type="text/css"/>
-
-<div class="mfw-toolbar" id="_j_mfwtoolbar">
-    <div class="toolbar-item-top">
-        <a role="button" class="btn _j_gotop">
-            <i class="icon_top"></i>
-            <em>返回顶部</em>
-        </a>
-    </div>
-    <div class="toolbar-item-feedback">
-        <a role="button" data-japp="feedback" class="btn">
-            <i class="icon_feedback"></i>
-            <em>意见反馈</em>
-        </a>
-    </div>
-    <div class="toolbar-item-code">
-        <a role="button" class="btn">
-            <i class="icon_code"></i>
-        </a>
-        <a role="button" class="mfw-code _j_code">
-
-
-            <img src="https://n3-q.mafengwo.net/s9/M00/01/7B/wKgBs1gjDcmAKFXuAAERZRJ4yus61.jpeg " width="300" height="192" >
-        </a>
-        <!--<div class="wx-official-pop"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"><i class="_j_closeqrcode"></i></div>-->
-    </div>
-    <div class="toolbar-item-down">
-        <a role="button" class="btn _j_gobottom">
-            <i class="icon_down"></i>
-            <em>页面底部</em>
-        </a>
-    </div>
-</div>
+        <%--<div class="ft-copyright">--%>
+            <%--<div class="ft-safety">--%>
+                <%--<a class="s-a" target="_blank" href="https://search.szfw.org/cert/l/CX20140627008255008321" id="___szfw_logo___"></a>--%>
+                <%--<a class="s-b" href="https://ss.knet.cn/verifyseal.dll?sn=e130816110100420286o93000000&ct=df&a=1&pa=787189" target="_blank" rel="nofollow"></a>--%>
+                <%--<a class="s-c" href="http://www.itrust.org.cn/Home/Index/itrust_certifi/wm/1669928206.html" target="_blank" rel="nofollow"></a>--%>
+            <%--</div>--%>
+            <%--<a href="http://www.mafengwo.cn"><i class="ft-mfw-logo"></i></a>--%>
+            <%--<p>© 2018 Mafengwo.cn <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow">京ICP备11015476号</a> 京公网安备110105013401号 <a href="http://images.mafengwo.net/images/about/icp.jpg" target="_blank" rel="nofollow">京ICP证110318号</a></p>--%>
+            <%--<p><a href="http://images.mafengwo.net/images/about/licence.jpg" target="_blank" rel="nofollow">营业执照</a> 新出网证(京)字242号 蚂蜂窝客服：国内 <span class="highlight">4006-345-678</span><span class="m_l_10">海外</span> <span class="highlight">+86-10-5922-2799</span></p>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
 
 
 
-<script language="javascript" type="text/javascript">
-    if (typeof M !== "undefined" && typeof M.loadResource === "function") {
-        M.loadResource("https://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+AHeader:js+M+module+PageAdmin:js+M+module+Storage:js+M+module+Cookie:js+M+module+ResourceKeeper:js+jquery.jgrowl.min:js+AMessage:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^ZlxW^1493174421.js");
-    }
-</script>
+<%--<link href="https://css.mafengwo.net/css/mfw-toolbar.css?1493174418" rel="stylesheet" type="text/css"/>--%>
+
+<%--<div class="mfw-toolbar" id="_j_mfwtoolbar">--%>
+    <%--<div class="toolbar-item-top">--%>
+        <%--<a role="button" class="btn _j_gotop">--%>
+            <%--<i class="icon_top"></i>--%>
+            <%--<em>返回顶部</em>--%>
+        <%--</a>--%>
+    <%--</div>--%>
+    <%--<div class="toolbar-item-feedback">--%>
+        <%--<a role="button" data-japp="feedback" class="btn">--%>
+            <%--<i class="icon_feedback"></i>--%>
+            <%--<em>意见反馈</em>--%>
+        <%--</a>--%>
+    <%--</div>--%>
+    <%--<div class="toolbar-item-code">--%>
+        <%--<a role="button" class="btn">--%>
+            <%--<i class="icon_code"></i>--%>
+        <%--</a>--%>
+        <%--<a role="button" class="mfw-code _j_code">--%>
+
+
+            <%--<img src="https://n3-q.mafengwo.net/s9/M00/01/7B/wKgBs1gjDcmAKFXuAAERZRJ4yus61.jpeg " width="300" height="192" >--%>
+        <%--</a>--%>
+        <%--<!--<div class="wx-official-pop"><img src="http://images.mafengwo.net/images/qrcode-weixin.gif"><i class="_j_closeqrcode"></i></div>-->--%>
+    <%--</div>--%>
+    <%--<div class="toolbar-item-down">--%>
+        <%--<a role="button" class="btn _j_gobottom">--%>
+            <%--<i class="icon_down"></i>--%>
+            <%--<em>页面底部</em>--%>
+        <%--</a>--%>
+    <%--</div>--%>
+<%--</div>--%>
+
+
+
+<%--<script language="javascript" type="text/javascript">--%>
+    <%--if (typeof M !== "undefined" && typeof M.loadResource === "function") {--%>
+        <%--M.loadResource("https://js.mafengwo.net/js/cv/js+Dropdown:js+pageletcommon+pageHeadUserInfoWWWNormal:js+jquery.tmpl:js+M+module+InputListener:js+M+module+SuggestionXHR:js+M+module+DropList:js+M+module+Suggestion:js+M+module+MesSearchEvent:js+SiteSearch:js+AHeader:js+M+module+PageAdmin:js+M+module+Storage:js+M+module+Cookie:js+M+module+ResourceKeeper:js+jquery.jgrowl.min:js+AMessage:js+M+module+dialog+Layer:js+M+module+dialog+DialogBase:js+M+module+dialog+Dialog:js+M+module+FrequencyVerifyControl:js+M+module+FrequencySystemVerify:js+ALogin:js+M+module+ScrollObserver:js+M+module+QRCode:js+AToolbar:js+ACnzzGaLog:js+ARecruit:js+ALazyLoad^ZlxW^1493174421.js");--%>
+    <%--}--%>
+<%--</script>--%>
 
 </body>
 </html>
